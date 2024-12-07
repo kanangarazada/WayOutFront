@@ -1,0 +1,142 @@
+/* Base styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Light mode background */
+    color: #1e293b; /* Light mode text color */
+}
+
+.dark body {
+    background-color: #1e293b; /* Dark mode background */
+    color: #f8fafc; /* Dark mode text color */
+}
+
+/* Balance Card */
+.balance-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+.dark .balance-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.1), rgba(30, 41, 59, 0.05));
+    border: 1px solid rgba(30, 41, 59, 0.1);
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
+}
+
+/* Deposit Button */
+.deposit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(to right, #8B5CF6, #3B82F6);
+    color: white;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.deposit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #3B82F6, #8B5CF6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.deposit-btn:hover {
+    transform: translateY(-2px);
+}
+
+.deposit-btn:hover::before {
+    opacity: 1;
+}
+
+.deposit-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Navigation Items */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.25rem;
+    color: #64748b;
+    transition: all 0.3s ease;
+}
+
+.nav-item i {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-item span {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.nav-item:hover i {
+    transform: translateY(-2px);
+}
+
+.nav-item.active {
+    color: #3B82F6;
+}
+
+.dark .nav-item {
+    color: #cbd5e1;
+}
+
+.dark .nav-item.active {
+    color: #60a5fa;
+}
+
+/* Article Card */
+.article-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-2px);
+}
+
+.dark .article-card {
+    background: rgba(30, 41, 59, 0.05);
+}
+
+/* Pulse Dot */
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10B981;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}

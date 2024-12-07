@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zypher App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-100 dark:bg-slate-900 min-h-screen">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg">
+        <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <h1 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
+                Zypher
+            </h1>
+            <button class="theme-toggle p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                <i class="fas fa-moon text-slate-600 dark:text-slate-400"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-24 pb-24">
+        <!-- Balance Card -->
+        <div class="balance-card">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold text-slate-800 dark:text-white">Your Balance</h2>
+                <div class="pulse-dot"></div>
+            </div>
+            <p class="text-4xl font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                $100 <span class="text-emerald-500">+</span> $0.<span id="decimals">000033</span>
+            </p>
+            <div class="flex items-center gap-2 mb-6">
+                <span class="text-emerald-500">+12%</span>
+                <span class="text-sm text-slate-500 dark:text-slate-400">this month</span>
+            </div>
+            <button class="deposit-btn">
+                <span>Deposit Now</span>
+            </button>
+        </div>
+
+        <!-- Articles -->
+        <div class="mt-8 space-y-6">
+            <article class="article-card">
+                <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                    Understanding Digital Finance
+                </h3>
+                <p class="text-slate-600 dark:text-slate-300 mb-4">
+                    The landscape of digital finance is rapidly evolving, transforming how we interact with money. 
+                    From blockchain technology to decentralized finance (DeFi), these innovations are reshaping 
+                    traditional financial systems.
+                </p>
+                <a href="#" class="text-blue-500 hover:text-blue-600 dark:text-blue-400 font-medium">
+                    Read More →
+                </a>
+            </article>
+
+            <article class="article-card">
+                <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                    Security in Digital Age
+                </h3>
+                <p class="text-slate-600 dark:text-slate-300 mb-4">
+                    In an era where digital assets are becoming increasingly valuable, security remains paramount. 
+                    Multi-factor authentication, hardware wallets, and encrypted communications form the backbone 
+                    of modern financial security.
+                </p>
+                <a href="#" class="text-blue-500 hover:text-blue-600 dark:text-blue-400 font-medium">
+                    Read More →
+                </a>
+            </article>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-around py-2">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Transactions</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Deposit</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <script src="main.js"></script>
+</body>
+</html>
