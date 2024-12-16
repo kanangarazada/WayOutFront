@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw - Zypher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-white min-h-screen font-[Inter] pb-20">
+    <!-- Header -->
+    <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
+                    Zypher
+                </span>
+            </a>
+            <a href="/" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">
+                <i class="fas fa-user text-slate-400"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Available Balance -->
+        <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 mb-6">
+            <span class="text-slate-400 text-sm block mb-2">Available for Withdrawal</span>
+            <div class="text-3xl font-bold text-white flex items-center gap-2">
+                1,250.00 
+                <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-6">
+            </div>
+        </div>
+
+        <!-- Withdrawal Form -->
+        <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
+            <form id="withdrawForm" class="space-y-6">
+                <!-- Wallet Address -->
+                <div>
+                    <label for="walletAddress" class="block text-sm font-medium text-slate-400 mb-2">
+                        Wallet Address
+                    </label>
+                    <input type="text" id="walletAddress" 
+                        class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                        placeholder="Enter your USDT wallet address">
+                </div>
+
+                <!-- Amount -->
+                <div>
+                    <label for="amount" class="block text-sm font-medium text-slate-400 mb-2">
+                        Amount
+                    </label>
+                    <div class="relative">
+                        <input type="number" id="amount" 
+                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                            placeholder="0.00">
+                        <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" 
+                    class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-opacity">
+                    Withdraw
+                </button>
+            </form>
+        </div>
+
+        <!-- Success Message (Hidden by default) -->
+        <div id="successMessage" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 max-w-sm mx-4 text-center scale-95 opacity-0 transition-all duration-300">
+                <div class="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-3xl text-emerald-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-2">Withdrawal Successful</h3>
+                <p class="text-slate-400 mb-6">Your withdrawal request has been processed successfully.</p>
+                <button onclick="hideSuccessMessage()" 
+                    class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-opacity">
+                    Done
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-around py-2">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="wallet.html" class="nav-item">
+                    <i class="fas fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Transactions</span>
+                </a>
+                <a href="withdraw.html" class="nav-item active">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Withdraw</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('withdrawForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const successMessage = document.getElementById('successMessage');
+            const messageContent = successMessage.querySelector('.balance-card');
+            
+            // Show the modal
+            successMessage.classList.remove('pointer-events-none', 'opacity-0');
+            // Animate the content
+            setTimeout(() => {
+                messageContent.classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        });
+
+        function hideSuccessMessage() {
+            const successMessage = document.getElementById('successMessage');
+            const messageContent = successMessage.querySelector('.balance-card');
+            
+            // Animate out
+            messageContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                successMessage.classList.add('pointer-events-none', 'opacity-0');
+                // Reset form
+                document.getElementById('withdrawForm').reset();
+            }, 200);
+        }
+    </script>
+</body>
+</html> 
