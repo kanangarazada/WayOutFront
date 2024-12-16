@@ -12,11 +12,16 @@
 <body class="bg-slate-100 dark:bg-slate-900 min-h-screen">
     <!-- Header -->
     <header class="fixed w-full top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg">
-        <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <h1 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
-                Zypher
-            </h1>
-        </nav>
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
+                    Zypher
+                </span>
+            </a>
+            <a href="/" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">
+                <i class="fas fa-user text-slate-400"></i>
+            </a>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -30,9 +35,12 @@
             <p class="text-3xl font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
                 $100 <span class="text-emerald-500">+</span> $0.<span id="decimals">000033</span>
             </p>
-            <div class="flex items-center gap-2 mb-6">
-                <span class="text-emerald-500">+12%</span>
-                <span class="text-sm text-slate-500 dark:text-slate-400">this month</span>
+            <div class="flex items-center justify-between mb-6">
+                <span class="text-emerald-400">+12% this month</span>
+                <a href="balance.html" class="group flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors">
+                    <span>View Details</span>
+                    <i class="fas fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform"></i>
+                </a>
             </div>
             <button class="deposit-btn">
                 <span>Deposit Now</span>
@@ -86,10 +94,6 @@
                 <a href="#" class="nav-item">
                     <i class="fas fa-exchange-alt"></i>
                     <span>Transactions</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-user"></i>
-                    <span>Profile</span>
                 </a>
                 <a href="#" class="nav-item">
                     <i class="fas fa-money-bill-wave"></i>
