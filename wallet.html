@@ -224,13 +224,13 @@
 
                     <!-- Quick Amount Buttons -->
                     <div class="flex gap-1.5 flex-wrap">
-                        <button class="px-2 py-1 text-xs bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1">
+                        <button onclick="setEarnAmount(100)" class="px-2 py-1 text-xs bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1">
                             100 USDT
                         </button>
-                        <button class="px-2 py-1 text-xs bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1">
+                        <button onclick="setEarnAmount(500)" class="px-2 py-1 text-xs bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1">
                             500 USDT
                         </button>
-                        <button class="px-2 py-1 text-xs bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1">
+                        <button onclick="setEarnAmount(1000)" class="px-2 py-1 text-xs bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1">
                             1000 USDT
                         </button>
                     </div>
@@ -402,6 +402,13 @@
     // Quick amount setter function
     function setAmount(amount) {
         document.getElementById('depositAmount').value = amount;
+    }
+
+    function setEarnAmount(amount) {
+        const earnInput = document.querySelector('#earnModal input[type="number"]');
+        if (earnInput) {
+            earnInput.value = amount;
+        }
     }
     </script>
 </body>
