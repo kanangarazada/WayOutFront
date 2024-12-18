@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - Zypher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-white min-h-screen font-[Inter] pb-20">
+    <!-- Header -->
+    <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
+                    Zypher
+                </span>
+            </a>
+            <a href="/" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">
+                <i class="fas fa-user text-slate-400"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6">
+        <!-- Transaction List -->
+        <div class="space-y-4">
+            <!-- Deposit Transaction -->
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
+                <div class="flex items-start justify-between">
+                    <div class="flex gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+                            <i class="fas fa-arrow-down text-emerald-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white">Deposit</h3>
+                            <p class="text-xs text-slate-400">Mar 15, 2024 • 14:30</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="flex items-center gap-1 text-white font-medium">
+                            +500.00
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-4">
+                        </div>
+                        <span class="text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-500">Completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Withdrawal Transaction -->
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
+                <div class="flex items-start justify-between">
+                    <div class="flex gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                            <i class="fas fa-arrow-up text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white">Withdrawal</h3>
+                            <p class="text-xs text-slate-400">Mar 14, 2024 • 09:15</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="flex items-center gap-1 text-white font-medium">
+                            -200.00
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-4">
+                        </div>
+                        <span class="text-xs px-2 py-1 rounded-full bg-yellow-500/10 text-yellow-500">Processing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Failed Transaction -->
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
+                <div class="flex items-start justify-between">
+                    <div class="flex gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                            <i class="fas fa-arrow-up text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white">Withdrawal</h3>
+                            <p class="text-xs text-slate-400">Mar 13, 2024 • 16:45</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="flex items-center gap-1 text-white font-medium">
+                            -150.00
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-4">
+                        </div>
+                        <span class="text-xs px-2 py-1 rounded-full bg-red-500/10 text-red-500">Failed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Transaction -->
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
+                <div class="flex items-start justify-between">
+                    <div class="flex gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+                            <i class="fas fa-arrow-down text-emerald-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white">Deposit</h3>
+                            <p class="text-xs text-slate-400">Mar 13, 2024 • 11:20</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="flex items-center gap-1 text-white font-medium">
+                            +300.00
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-4">
+                        </div>
+                        <span class="text-xs px-2 py-1 rounded-full bg-slate-500/10 text-slate-400">Pending</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-around py-2">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="wallet.html" class="nav-item">
+                    <i class="fas fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+                <a href="referrals.html" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>Referrals</span>
+                </a>
+                <a href="withdraw.html" class="nav-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Withdraw</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html> 
