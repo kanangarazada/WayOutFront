@@ -103,5 +103,112 @@
         </div>
     </nav>
     <script src="assets/js/main.js"></script>
+
+    <!-- Add this modal HTML before closing body tag -->
+    <div id="depositModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="container mx-auto px-4 h-full flex items-center justify-center">
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 w-full max-w-md transform scale-95 translate-y-4 transition-all duration-300">
+                <!-- Modal Header -->
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-semibold text-white">Deposit USDT</h3>
+                    <button id="closeDepositModalBtn" class="text-slate-400 hover:text-white transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Content -->
+                <form id="depositForm">
+                    <div class="space-y-6">
+                        <!-- Amount Input -->
+                        <div>
+                            <label for="depositAmount" class="block text-sm font-medium text-slate-400 mb-2">
+                                Amount
+                            </label>
+                            <div class="relative">
+                                <input type="number" id="depositAmount" 
+                                    class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                                    placeholder="0.00">
+                                <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                                    <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Amount Buttons -->
+                        <div class="flex gap-1.5 sm:gap-2 flex-wrap">
+                            <button type="button" onclick="setAmount(100)" 
+                                class="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1 overflow-hidden group">
+                                <span class="block transform group-active:-translate-y-2 transition-transform">
+                                    100 USDT
+                                </span>
+                            </button>
+                            <button type="button" onclick="setAmount(500)" 
+                                class="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1 overflow-hidden group">
+                                <span class="block transform group-active:-translate-y-2 transition-transform">
+                                    500 USDT
+                                </span>
+                            </button>
+                            <button type="button" onclick="setAmount(1000)" 
+                                class="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1 overflow-hidden group">
+                                <span class="block transform group-active:-translate-y-2 transition-transform">
+                                    1000 USDT
+                                </span>
+                            </button>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" 
+                            class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1 overflow-hidden group">
+                            <span class="block transform group-active:-translate-y-2 transition-transform">
+                                Make Deposit
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this JavaScript before closing body tag -->
+    <script>
+        // Get modal elements
+        const depositModal = document.getElementById('depositModal');
+        const depositModalContent = depositModal.querySelector('.balance-card');
+        const closeDepositModalBtn = document.getElementById('closeDepositModalBtn');
+        const depositForm = document.getElementById('depositForm');
+
+        // Show modal function
+        function showDepositModal() {
+            depositModal.classList.remove('hidden');
+            setTimeout(() => {
+                depositModal.classList.remove('opacity-0');
+                depositModalContent.classList.remove('scale-95', 'translate-y-4');
+            }, 10);
+        }
+
+        // Hide modal function
+        function hideDepositModal() {
+            depositModalContent.classList.add('scale-95', 'translate-y-4');
+            depositModal.classList.add('opacity-0');
+            setTimeout(() => {
+                depositModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Set amount function
+        function setAmount(amount) {
+            document.getElementById('depositAmount').value = amount;
+        }
+
+        // Add event listeners
+        document.querySelector('.deposit-btn').addEventListener('click', showDepositModal);
+        closeDepositModalBtn.addEventListener('click', hideDepositModal);
+        
+        depositForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Handle deposit logic here
+            hideDepositModal();
+        });
+    </script>
 </body>
 </html>

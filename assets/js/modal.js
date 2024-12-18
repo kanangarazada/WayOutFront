@@ -6,7 +6,7 @@ class ModalHandler {
         this.amountInput = this.earnModal.querySelector('input[type="number"]');
         this.closeButton = document.getElementById('closeModalBtn');
         this.quickAmountButtons = this.earnModal.querySelectorAll('.mt-3 button');
-        this.earnButtons = document.querySelectorAll('.balance-card button:last-child');
+        this.earnButtons = document.querySelectorAll('.from-emerald-500');
         
         this.isAnimating = false;
         
