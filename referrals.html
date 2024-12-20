@@ -20,9 +20,50 @@
                     Zypher
                 </span>
             </a>
-            <a href="/" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">
-                <i class="fas fa-user text-slate-400"></i>
-            </a>
+            <div class="flex items-center gap-2">
+                <!-- Language Selector -->
+                <button id="languageBtn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
+                    <i class="fas fa-globe text-slate-400"></i>
+                </button>
+                
+                <!-- Language Modal -->
+                <div id="languageModal" class="hidden absolute top-16 right-4 w-48 bg-slate-800 rounded-xl border border-slate-700/50 shadow-lg">
+                    <div class="p-2 space-y-1">
+                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded" alt="English">
+                            English
+                        </button>
+                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded" alt="Turkish">
+                            Türkçe
+                        </button>
+                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded" alt="Russian">
+                            Русский
+                        </button>
+                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded" alt="Spanish">
+                            Español
+                        </button>
+                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
+                            Français
+                        </button>
+                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
+                            Deutsch
+                        </button>
+                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded" alt="Chinese">
+                            中文
+                        </button>
+                    </div>
+                </div>
+
+                <a href="/" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">
+                    <i class="fas fa-user text-slate-400"></i>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -244,5 +285,6 @@
             }
         }
     </script>
+    <script src="assets/js/langSupport.js"></script>
 </body>
 </html> 
