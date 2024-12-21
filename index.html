@@ -143,8 +143,6 @@
             </div>
         </div>
     </nav>
-    <script src="assets/js/main.js"></script>
-
     <!-- Add this modal HTML before closing body tag -->
     <div id="depositModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
         <div class="container mx-auto px-4 h-full flex items-center justify-center">
@@ -201,48 +199,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Add this JavaScript before closing body tag -->
-    <script>
-        // Get modal elements
-        const depositModal = document.getElementById('depositModal');
-        const depositModalContent = depositModal.querySelector('.balance-card');
-        const closeDepositModalBtn = document.getElementById('closeDepositModalBtn');
-        const depositForm = document.getElementById('depositForm');
-
-        // Show modal function
-        function showDepositModal() {
-            depositModal.classList.remove('hidden');
-            setTimeout(() => {
-                depositModal.classList.remove('opacity-0');
-                depositModalContent.classList.remove('scale-95', 'translate-y-4');
-            }, 10);
-        }
-
-        // Hide modal function
-        function hideDepositModal() {
-            depositModalContent.classList.add('scale-95', 'translate-y-4');
-            depositModal.classList.add('opacity-0');
-            setTimeout(() => {
-                depositModal.classList.add('hidden');
-            }, 300);
-        }
-
-        // Set amount function
-        function setAmount(amount) {
-            document.getElementById('depositAmount').value = amount;
-        }
-
-        // Add event listeners
-        document.querySelector('.deposit-btn').addEventListener('click', showDepositModal);
-        closeDepositModalBtn.addEventListener('click', hideDepositModal);
-        
-        depositForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Handle deposit logic here
-            hideDepositModal();
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/langSupport.js"></script>
 </body>
 </html>
