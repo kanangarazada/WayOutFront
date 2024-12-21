@@ -181,3 +181,37 @@ function setEarnAmount(amount) {
         earnInput.value = amount;
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Deposit Form Handler
+    const depositForm = document.querySelector('#depositForm');
+    if (depositForm) {
+        depositForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success toast
+            showToast('Deposit request submitted successfully!');
+            
+            // Close modal with animation
+            const modal = document.querySelector('#depositModal');
+            hideModal(modal); // Using hideModal from modal.js
+            this.reset();
+        });
+    }
+
+    // Earn Form Handler
+    const earnForm = document.querySelector('form#earnForm');
+    if (earnForm) {
+        earnForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success toast
+            showToast('Earn request submitted successfully!');
+            
+            // Close modal with animation
+            const modal = document.querySelector('#earnModal');
+            hideModal(modal); // Using hideModal from modal.js
+            this.reset();
+        });
+    }
+});
