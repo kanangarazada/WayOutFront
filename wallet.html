@@ -88,7 +88,7 @@
                     <button class="deposit-trigger flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
                         Deposit
                     </button>
-                    <button class="flex-1 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
+                    <button class="earn-trigger flex-1 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
                         Earn
                     </button>
                 </div>
@@ -223,7 +223,7 @@
                 </div>
 
                 <!-- Modal Content -->
-                <div class="space-y-4">
+                <form id="earnForm" class="space-y-4">
                     <!-- Info Section -->
                     <div class="bg-purple-500/10 border border-purple-500/20 rounded-xl p-3">
                         <div class="flex items-start space-x-2">
@@ -251,7 +251,7 @@
                             Amount
                         </label>
                         <div class="relative">
-                            <input type="number" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" placeholder="0.00">
+                            <input id="earnAmount" type="number" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" placeholder="0.00">
                             <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
                                 <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
                             </div>
@@ -275,10 +275,10 @@
                     </div>
 
                     <!-- Update Start Earning button -->
-                    <button class="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
+                    <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
                         Start Earning
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </div>

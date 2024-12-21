@@ -81,15 +81,18 @@ class DepositModalHandler {
         }, 300);
     }
 }
+
 class ModalHandler {
     constructor() {
         // Modal elements
         this.earnModal = document.getElementById('earnModal');
         this.modalContent = this.earnModal.querySelector('.balance-card');
-        this.amountInput = this.earnModal.querySelector('input[type="number"]');
         this.closeButton = document.getElementById('closeModalBtn');
-        this.quickAmountButtons = this.earnModal.querySelectorAll('.mt-3 button');
-        this.earnButtons = document.querySelectorAll('.from-emerald-500');
+        this.earnForm = document.getElementById('earnForm');
+        this.amountInput = document.getElementById('earnAmount');
+        
+        // Get both deposit buttons (Add USDT and Deposit)
+        this.earnButtons = document.querySelectorAll('.earn-trigger');
         
         this.isAnimating = false;
         
@@ -97,37 +100,25 @@ class ModalHandler {
     }
 
     initializeEventListeners() {
-        // Earn buttons
+        // Deposit buttons
         this.earnButtons.forEach(button => {
-            if (!button.disabled) {
-                button.addEventListener('click', () => this.openModal());
-            }
-        });
-
-        // Quick amount buttons
-        this.quickAmountButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const amount = parseInt(button.textContent);
-                this.amountInput.value = amount;
-            });
+            button.addEventListener('click', () => this.openModal());
         });
 
         // Close modal events
         this.earnModal.addEventListener('click', (e) => {
             if (e.target === this.earnModal) {
-                this.handleClose(e);
+                this.handleClose();
             }
         });
 
-        this.closeButton.addEventListener('click', (e) => {
+        this.closeButton.addEventListener('click', () => this.handleClose());
+
+        // Form submit
+        this.earnForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            e.stopPropagation();
-            const clickEvent = new MouseEvent('click', {
-                bubbles: true,
-                cancelable: true,
-                view: window
-            });
-            this.earnModal.dispatchEvent(clickEvent);
+            // Handle deposit logic here
+            this.handleClose();
         });
 
         // Escape key handler
@@ -156,7 +147,7 @@ class ModalHandler {
         });
     }
 
-    handleClose(e) {
+    handleClose() {
         if (this.isAnimating) return;
         this.isAnimating = true;
 
@@ -170,7 +161,7 @@ class ModalHandler {
             document.body.style.overflow = '';
             this.amountInput.value = '';
             this.isAnimating = false;
-        }, 500);
+        }, 300);
     }
 }
 // Initialize deposit modal handler
