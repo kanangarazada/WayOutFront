@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Zypher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-white min-h-screen font-[Inter]">
+    <!-- Header -->
+    <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
+                    Zypher
+                </span>
+            </a>
+            <div class="flex items-center gap-2">
+                <!-- Language Selector -->
+                <button id="languageBtn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
+                    <i class="fas fa-globe text-slate-400"></i>
+                </button>
+                <a href="profile.html" class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
+                    <i class="fas fa-user text-white"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6 pb-24">
+        <!-- Profile Header -->
+        <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 mb-6">
+            <div class="flex items-center gap-4">
+                <div class="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center">
+                    <i class="fas fa-user text-2xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-semibold text-white">John Doe</h1>
+                    <p class="text-sm text-slate-400">Joined March 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Section -->
+        <div class="space-y-4">
+            <!-- Account Settings -->
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
+                <h2 class="text-lg font-semibold mb-4">Settings</h2>
+                
+                <!-- Email -->
+                <div class="flex items-center justify-between py-3 border-b border-slate-700/50">
+                    <div>
+                        <h3 class="text-sm font-medium">Email</h3>
+                        <p class="text-xs text-slate-400">john.doe@example.com</p>
+                    </div>
+                    <button class="change-email text-xs text-blue-400 hover:text-blue-300">Change</button>
+                </div>
+
+                <!-- Password -->
+                <div class="flex items-center justify-between py-3">
+                    <div>
+                        <h3 class="text-sm font-medium">Password</h3>
+                        <p class="text-xs text-slate-400">Last changed 2 months ago</p>
+                    </div>
+                    <button class="change-password text-xs text-blue-400 hover:text-blue-300">Change</button>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
+                <h2 class="text-lg font-semibold mb-4">Support</h2>
+                
+                <!-- Telegram -->
+                <div class="flex items-center justify-between py-3 border-b border-slate-700/50">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                            <i class="fab fa-telegram-plane text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium">Telegram</h3>
+                            <p class="text-xs text-slate-400">Join our community</p>
+                        </div>
+                    </div>
+                    <a href="#" class="text-xs text-blue-400 hover:text-blue-300">Open</a>
+                </div>
+
+                <!-- Instagram -->
+                <div class="flex items-center justify-between py-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center">
+                            <i class="fab fa-instagram text-pink-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-medium">Instagram</h3>
+                            <p class="text-xs text-slate-400">Follow us</p>
+                        </div>
+                    </div>
+                    <a href="#" class="text-xs text-blue-400 hover:text-blue-300">Open</a>
+                </div>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-semibold">Transaction History</h2>
+                    <a href="transactions.html" class="text-xs text-blue-400 hover:text-blue-300">View All</a>
+                </div>
+                
+                <!-- Recent Transactions Preview -->
+                <div class="space-y-3">
+                    <!-- Transaction Item -->
+                    <div class="flex items-center justify-between py-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+                                <i class="fas fa-arrow-down text-emerald-500 text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium">Deposit</h3>
+                                <p class="text-xs text-slate-400">Mar 15, 2024</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm font-medium">+500 USDT</div>
+                        </div>
+                    </div>
+
+                    <!-- Transaction Item -->
+                    <div class="flex items-center justify-between py-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                                <i class="fas fa-arrow-up text-blue-500 text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium">Withdrawal</h3>
+                                <p class="text-xs text-slate-400">Mar 14, 2024</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm font-medium">-200 USDT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logout Button -->
+            <button id="logoutBtn" class="w-full px-4 py-3 rounded-lg border border-red-500/20 text-red-400 hover:bg-red-500/10 transition-colors text-sm">
+                Log Out
+            </button>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-around py-2">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="wallet.html" class="nav-item">
+                    <i class="fas fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+                <a href="referrals.html" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>Referrals</span>
+                </a>
+                <a href="withdraw.html" class="nav-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Withdraw</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add this modal before closing body tag -->
+    <div id="logoutModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="container mx-auto px-4 h-full flex items-center justify-center">
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 w-full max-w-sm transform scale-95 translate-y-4 transition-all duration-300">
+                <!-- Modal Content -->
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sign-out-alt text-red-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Log Out</h3>
+                    <p class="text-sm text-slate-400 mb-6">Are you sure you want to log out?</p>
+                    
+                    <div class="flex gap-3">
+                        <button id="cancelLogout" class="flex-1 px-4 py-3 rounded-lg border border-slate-700 text-slate-300 hover:bg-slate-800 transition-all active:transform active:translate-y-1">
+                            Cancel
+                        </button>
+                        <button id="confirmLogout" class="flex-1 px-4 py-3 rounded-lg bg-red-500 text-white hover:bg-red-600 transition-all active:transform active:translate-y-1">
+                            Log Out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add these modals before closing body tag -->
+
+    <!-- Email Change Modal -->
+    <div id="emailModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="container mx-auto px-4 h-full flex items-center justify-center">
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 w-full max-w-sm transform scale-95 translate-y-4 transition-all duration-300">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-semibold text-white">Change Email</h3>
+                    <button class="closeModal text-slate-400 hover:text-white transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Current Email</label>
+                        <input type="email" value="john.doe@example.com" disabled 
+                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-400">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">New Email</label>
+                        <input type="email" placeholder="Enter new email" required
+                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Password</label>
+                        <input type="password" placeholder="Confirm with password" required
+                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-600 transition-all active:transform active:translate-y-1">
+                        Update Email
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Change Modal -->
+    <div id="passwordModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="container mx-auto px-4 h-full flex items-center justify-center">
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 w-full max-w-sm transform scale-95 translate-y-4 transition-all duration-300">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-semibold text-white">Change Password</h3>
+                    <button class="closeModal text-slate-400 hover:text-white transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Current Password</label>
+                        <input type="password" placeholder="Enter current password" required
+                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">New Password</label>
+                        <input type="password" placeholder="Enter new password" required
+                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Confirm New Password</label>
+                        <input type="password" placeholder="Confirm new password" required
+                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-600 transition-all active:transform active:translate-y-1">
+                        Update Password
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this toast notification HTML before closing body tag -->
+    <div id="successToast" class="fixed top-4 right-4 transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-[60]">
+        <div class="bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 text-white px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 pr-12 relative">
+            <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
+                <i class="fas fa-check text-purple-400 text-sm"></i>
+            </div>
+            <span id="toastMessage" class="font-medium text-slate-200"></span>
+            <button onclick="hideToast()" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-slate-700/50 rounded-lg transition-colors">
+                <i class="fas fa-times text-slate-400 text-sm"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Add this JavaScript before closing body tag -->
+    <script>
+        const logoutBtn = document.getElementById('logoutBtn');
+        const logoutModal = document.getElementById('logoutModal');
+        const modalContent = logoutModal.querySelector('.balance-card');
+        const cancelLogout = document.getElementById('cancelLogout');
+        const confirmLogout = document.getElementById('confirmLogout');
+
+        // Show modal
+        function showModal() {
+            logoutModal.classList.remove('hidden');
+            setTimeout(() => {
+                logoutModal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95', 'translate-y-4');
+            }, 10);
+        }
+
+        // Hide modal
+        function hideModal() {
+            modalContent.classList.add('scale-95', 'translate-y-4');
+            logoutModal.classList.add('opacity-0');
+            setTimeout(() => {
+                logoutModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Event Listeners
+        logoutBtn.addEventListener('click', showModal);
+        
+        cancelLogout.addEventListener('click', hideModal);
+        
+        confirmLogout.addEventListener('click', () => {
+            // Add your logout logic here
+            window.location.href = 'login.html'; // or wherever you want to redirect
+        });
+
+        // Close on click outside
+        logoutModal.addEventListener('click', (e) => {
+            if (e.target === logoutModal) {
+                hideModal();
+            }
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !logoutModal.classList.contains('hidden')) {
+                hideModal();
+            }
+        });
+
+        let toastTimeout;
+
+        function showToast(message) {
+            const toast = document.getElementById('successToast');
+            const messageEl = document.getElementById('toastMessage');
+            
+            // Clear any existing timeout
+            if (toastTimeout) {
+                clearTimeout(toastTimeout);
+            }
+            
+            // Set message
+            messageEl.textContent = message;
+            
+            // Show toast
+            requestAnimationFrame(() => {
+                toast.classList.remove('translate-x-full', 'opacity-0');
+                toast.classList.add('translate-x-0', 'opacity-100');
+            });
+
+            // Hide toast after 4 seconds
+            toastTimeout = setTimeout(hideToast, 4000);
+        }
+
+        function hideToast() {
+            const toast = document.getElementById('successToast');
+            
+            // Clear any existing timeout
+            if (toastTimeout) {
+                clearTimeout(toastTimeout);
+            }
+            
+            // Hide toast
+            toast.classList.remove('translate-x-0', 'opacity-100');
+            toast.classList.add('translate-x-full', 'opacity-0');
+        }
+
+        function setupModal(triggerButtonClass, modalId) {
+            const modal = document.getElementById(modalId);
+            const modalContent = modal.querySelector('.balance-card');
+            const triggerButton = document.querySelector(`.${triggerButtonClass}`);
+            const closeButton = modal.querySelector('.closeModal');
+            
+            function showModal() {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95', 'translate-y-4');
+                }, 10);
+            }
+
+            function hideModal() {
+                modalContent.classList.add('scale-95', 'translate-y-4');
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    // Reset form
+                    modal.querySelector('form').reset();
+                }, 300);
+            }
+
+            // Event Listeners
+            triggerButton.addEventListener('click', showModal);
+            closeButton.addEventListener('click', hideModal);
+
+            // Close on click outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    hideModal();
+                }
+            });
+
+            // Update form submission
+            const form = modal.querySelector('form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Add your form submission logic here
+                
+                // Show success message based on modal type
+                if (modalId === 'emailModal') {
+                    showToast('Email updated successfully!');
+                } else if (modalId === 'passwordModal') {
+                    showToast('Password updated successfully!');
+                }
+                
+                hideModal();
+            });
+        }
+
+        // Initialize modals
+        setupModal('change-email', 'emailModal');
+        setupModal('change-password', 'passwordModal');
+
+        // Close modals on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('#emailModal, #passwordModal').forEach(modal => {
+                    if (!modal.classList.contains('hidden')) {
+                        modal.querySelector('.closeModal').click();
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Add this CSS -->
+    <style>
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        #successToast {
+            animation-duration: 500ms;
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</body>
+</html> 
