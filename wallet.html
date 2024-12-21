@@ -77,9 +77,6 @@
                         <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="w-8 h-8 mr-2">
                         <span class="text-white font-semibold">USDT</span>
                     </div>
-                    <button class="deposit-trigger px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all">
-                        Add USDT
-                    </button>
                 </div>
 
                 <div class="mb-8">
@@ -88,12 +85,10 @@
                 </div>
 
                 <div class="flex gap-3">
-                    <button
-                        class="deposit-trigger flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg hover:opacity-90 transition-all">
+                    <button class="deposit-trigger flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
                         Deposit
                     </button>
-                    <button
-                        class="flex-1 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:opacity-90 transition-all">
+                    <button class="flex-1 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
                         Earn
                     </button>
                 </div>
@@ -263,19 +258,23 @@
                         </div>
                     </div>
 
-                    <!-- Quick Amount Buttons -->
-                    <div class="flex gap-1.5 flex-wrap">
-                        <button onclick="setEarnAmount(100)" class="px-2 py-1 text-xs bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1">
+                      <!-- Quick Amount Buttons -->
+                      <div class="grid grid-cols-3 gap-2 mb-4">
+                        <button type="button" onclick="setEarnAmount(50)" 
+                            class="h-9 px-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700/50 transition-all active:transform active:translate-y-1">
+                            50 USDT
+                        </button>
+                        <button type="button" onclick="setEarnAmount(100)" 
+                            class="h-9 px-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700/50 transition-all active:transform active:translate-y-1">
                             100 USDT
                         </button>
-                        <button onclick="setEarnAmount(500)" class="px-2 py-1 text-xs bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1">
-                            500 USDT
-                        </button>
-                        <button onclick="setEarnAmount(1000)" class="px-2 py-1 text-xs bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1">
-                            1000 USDT
+                        <button type="button" onclick="setEarnAmount(200)" 
+                            class="h-9 px-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700/50 transition-all active:transform active:translate-y-1">
+                            200 USDT
                         </button>
                     </div>
 
+                    <!-- Update Start Earning button -->
                     <button class="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
                         Start Earning
                     </button>
@@ -315,33 +314,25 @@
                         </div>
 
                         <!-- Quick Amount Buttons -->
-                        <div class="flex gap-1.5 sm:gap-2 flex-wrap">
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <button type="button" onclick="setAmount(50)" 
+                                class="h-9 px-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700/50 transition-all active:transform active:translate-y-1">
+                                50 USDT
+                            </button>
                             <button type="button" onclick="setAmount(100)" 
-                                class="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1 overflow-hidden group">
-                                <span class="block transform group-active:-translate-y-2 transition-transform">
-                                    100 USDT
-                                </span>
+                                class="h-9 px-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700/50 transition-all active:transform active:translate-y-1">
+                                100 USDT
                             </button>
-                            <button type="button" onclick="setAmount(500)" 
-                                class="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1 overflow-hidden group">
-                                <span class="block transform group-active:-translate-y-2 transition-transform">
-                                    500 USDT
-                                </span>
-                            </button>
-                            <button type="button" onclick="setAmount(1000)" 
-                                class="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-all active:transform active:translate-y-1 overflow-hidden group">
-                                <span class="block transform group-active:-translate-y-2 transition-transform">
-                                    1000 USDT
-                                </span>
+                            <button type="button" onclick="setAmount(200)" 
+                                class="h-9 px-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700/50 transition-all active:transform active:translate-y-1">
+                                200 USDT
                             </button>
                         </div>
 
                         <!-- Submit Button -->
                         <button type="submit" 
-                            class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1 overflow-hidden group">
-                            <span class="block transform group-active:-translate-y-2 transition-transform">
-                                Make Deposit
-                            </span>
+                            class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
+                            Make Deposit
                         </button>
                     </div>
                 </form>
