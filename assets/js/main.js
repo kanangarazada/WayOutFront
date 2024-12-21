@@ -55,3 +55,28 @@ depositForm.addEventListener('submit', function (e) {
     hideDepositModal();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the deposit form
+    const depositForm = document.querySelector('#depositForm');
+    
+    if (depositForm) {
+        depositForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success toast
+            showToast('Deposit request submitted successfully!');
+            
+            // Close modal with animation
+            const modal = document.querySelector('#depositModal');
+            const modalContent = modal.querySelector('.balance-card');
+            
+            modalContent.classList.add('scale-95', 'translate-y-4');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                this.reset();
+            }, 300);
+        });
+    }
+});
+
