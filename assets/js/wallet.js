@@ -191,10 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show success toast
             showToast('Deposit request submitted successfully!');
-            
-            // Close modal with animation
-            const modal = document.querySelector('#depositModal');
-            hideModal(modal); // Using hideModal from modal.js
             this.reset();
         });
     }
@@ -207,10 +203,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show success toast
             showToast('Earn request submitted successfully!');
-            
-            // Close modal with animation
-            const modal = document.querySelector('#earnModal');
-            hideModal(modal); // Using hideModal from modal.js
             this.reset();
         });
     }
