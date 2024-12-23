@@ -92,26 +92,30 @@
                             pattern="[0-9]*"
                             maxlength="1" 
                             class="w-14 h-14 text-center text-2xl font-bold rounded-lg border border-slate-400 bg-slate-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            oninput="this.value=this.value.replace(/[^0-9]/g,'')" 
+                            oninput="handleInput(this, 0)" 
+                            onkeydown="handleBackspace(this, 0)"
                             autofocus>
                         <input type="tel" 
                             inputmode="numeric" 
                             pattern="[0-9]*"
                             maxlength="1" 
                             class="w-14 h-14 text-center text-2xl font-bold rounded-lg border border-slate-400 bg-slate-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                            oninput="handleInput(this, 1)"
+                            onkeydown="handleBackspace(this, 1)">
                         <input type="tel" 
                             inputmode="numeric" 
                             pattern="[0-9]*"
                             maxlength="1" 
                             class="w-14 h-14 text-center text-2xl font-bold rounded-lg border border-slate-400 bg-slate-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                            oninput="handleInput(this, 2)"
+                            onkeydown="handleBackspace(this, 2)">
                         <input type="tel" 
                             inputmode="numeric" 
                             pattern="[0-9]*"
                             maxlength="1" 
                             class="w-14 h-14 text-center text-2xl font-bold rounded-lg border border-slate-400 bg-slate-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                            oninput="handleInput(this, 3)"
+                            onkeydown="handleBackspace(this, 3)">
                     </div>
 
                     <!-- Add error message div (initially hidden) -->
@@ -168,5 +172,44 @@
 
     <script src="assets/js/verify-code.js"></script>
     <script src="assets/js/langSupport.js"></script>
+    <script>
+        function handleInput(input, index) {
+            // Only allow numbers
+            input.value = input.value.replace(/[^0-9]/g, '');
+            
+            // If we have a number and there's a next input, focus it
+            if (input.value.length === 1 && index < 3) {
+                const inputs = document.querySelectorAll('input[type="tel"]');
+                inputs[index + 1].focus();
+            }
+        }
+
+        function handleBackspace(input, index) {
+            // On backspace
+            if (event.key === 'Backspace') {
+                // If input is empty and we're not on the first input, focus previous
+                if (input.value === '' && index > 0) {
+                    const inputs = document.querySelectorAll('input[type="tel"]');
+                    inputs[index - 1].focus();
+                }
+            }
+        }
+
+        // Add paste handler for the entire container
+        document.querySelector('.flex').addEventListener('paste', function(e) {
+            e.preventDefault();
+            const paste = e.clipboardData.getData('text');
+            const inputs = document.querySelectorAll('input[type="tel"]');
+            
+            // Only process if we have a 4-digit number
+            if (/^\d{4}$/.test(paste)) {
+                inputs.forEach((input, i) => {
+                    input.value = paste[i];
+                });
+                // Focus the last input
+                inputs[3].focus();
+            }
+        });
+    </script>
 </body>
 </html> 
