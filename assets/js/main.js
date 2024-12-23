@@ -17,66 +17,56 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(updateBalance, 1000);
 });
 
+// Modal handling
 const depositModal = document.getElementById('depositModal');
-const depositModalContent = depositModal.querySelector('.balance-card');
+const depositBtns = document.querySelectorAll('.deposit-btn');
 const closeDepositModalBtn = document.getElementById('closeDepositModalBtn');
-const depositForm = document.getElementById('depositForm');
 
-// Show modal function
-function showDepositModal() {
-    depositModal.classList.remove('hidden');
-    setTimeout(() => {
-        depositModal.classList.remove('opacity-0');
-        depositModalContent.classList.remove('scale-95', 'translate-y-4');
-    }, 10);
-}
+// Open modal
+depositBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        depositModal.classList.remove('hidden');
+        // Wait a tiny bit before removing opacity-0 to trigger transition
+        setTimeout(() => {
+            depositModal.classList.remove('opacity-0');
+        }, 20);
+    });
+});
 
-// Hide modal function
-function hideDepositModal() {
-    depositModalContent.classList.add('scale-95', 'translate-y-4');
+// Close modal
+function closeDepositModal() {
     depositModal.classList.add('opacity-0');
     setTimeout(() => {
         depositModal.classList.add('hidden');
-    }, 300);
+    }, 300); // Match this with the CSS transition duration
 }
 
-// Set amount function
+closeDepositModalBtn.addEventListener('click', closeDepositModal);
+
+// Close on outside click
+depositModal.addEventListener('click', (e) => {
+    if (e.target === depositModal) {
+        closeDepositModal();
+    }
+});
+
+// Handle quick amount buttons
 function setAmount(amount) {
     document.getElementById('depositAmount').value = amount;
 }
 
-// Add event listeners
-document.querySelector('.deposit-btn').addEventListener('click', showDepositModal);
-closeDepositModalBtn.addEventListener('click', hideDepositModal);
-
-depositForm.addEventListener('submit', function (e) {
+// Handle deposit form submission
+document.getElementById('depositForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    // Handle deposit logic here
-    hideDepositModal();
+    const amount = document.getElementById('depositAmount').value;
+    // Add your deposit logic here
+    
+    closeDepositModal();
+    showToast('Deposit request submitted successfully!');
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the deposit form
-    const depositForm = document.querySelector('#depositForm');
-    
-    if (depositForm) {
-        depositForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show success toast
-            showToast('Deposit request submitted successfully!');
-            
-            // Close modal with animation
-            const modal = document.querySelector('#depositModal');
-            const modalContent = modal.querySelector('.balance-card');
-            
-            modalContent.classList.add('scale-95', 'translate-y-4');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                this.reset();
-            }, 300);
-        });
-    }
+// Prevent closing when clicking inside modal
+depositModal.querySelector('.bg-gradient-to-br').addEventListener('click', (e) => {
+    e.stopPropagation();
 });
 

@@ -30,44 +30,44 @@
 
                 <!-- Language Modal -->
                 <div id="languageModal"
-                    class="hidden absolute top-16 right-4 w-48 bg-slate-800 rounded-xl border border-slate-700/50 shadow-lg">
+                    class="hidden absolute top-16 right-4 w-48 bg-slate-900 rounded-xl border border-slate-700/50 shadow-lg">
                     <div class="p-2 space-y-1">
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded"
                                 alt="English">
                             English
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded"
                                 alt="Turkish">
                             Türkçe
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded"
                                 alt="Russian">
                             Русский
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded"
                                 alt="Spanish">
                             Español
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
                             Français
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
                             Deutsch
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded"
                                 alt="Chinese">
                             中文
@@ -232,13 +232,11 @@
         </div>
     </nav>
     <!-- Add this modal HTML before closing body tag -->
-    <div id="depositModal"
-        class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div id="depositModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
         <div class="container mx-auto px-4 h-full flex items-center justify-center">
-            <div
-                class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 w-full max-w-md transform scale-95 translate-y-4 transition-all duration-300">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 w-full max-w-md transform scale-95 translate-y-4 transition-all duration-300 rounded-2xl">
                 <!-- Modal Header -->
-                <div class="flex justify-between items-center mb-6">
+                <div class="flex justify-between items-center mb-6 p-6">
                     <h3 class="text-xl font-semibold text-white">Deposit USDT</h3>
                     <button id="closeDepositModalBtn" class="text-slate-400 hover:text-white transition-colors">
                         <i class="fas fa-times"></i>
@@ -246,7 +244,7 @@
                 </div>
 
                 <!-- Modal Content -->
-                <form id="depositForm">
+                <form id="depositForm" class="px-6 pb-6">
                     <div class="space-y-6">
                         <!-- Amount Input -->
                         <div>
@@ -254,8 +252,8 @@
                                 Amount
                             </label>
                             <div class="relative">
-                                <input type="number" id="depositAmount"
-                                    class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                                <input type="number" id="depositAmount" 
+                                    class="w-full bg-slate-800 border border-slate-700/50 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                                     placeholder="0.00">
                                 <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
                                     <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
@@ -263,25 +261,25 @@
                             </div>
                         </div>
 
-                        <!-- Update Quick Amount buttons -->
+                        <!-- Quick Amount Buttons -->
                         <div class="grid grid-cols-3 gap-2 mb-4">
-                            <button type="button" onclick="setAmount(50)"
-                                class="h-9 px-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700/50 transition-all active:transform active:translate-y-1">
+                            <button type="button" onclick="setAmount(50)" 
+                                class="h-9 px-3 rounded-xl bg-slate-800 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700 transition-all active:transform active:translate-y-0.5">
                                 50 USDT
                             </button>
-                            <button type="button" onclick="setAmount(100)"
-                                class="h-9 px-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700/50 transition-all active:transform active:translate-y-1">
+                            <button type="button" onclick="setAmount(100)" 
+                                class="h-9 px-3 rounded-xl bg-slate-800 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700 transition-all active:transform active:translate-y-0.5">
                                 100 USDT
                             </button>
-                            <button type="button" onclick="setAmount(200)"
-                                class="h-9 px-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700/50 transition-all active:transform active:translate-y-1">
+                            <button type="button" onclick="setAmount(200)" 
+                                class="h-9 px-3 rounded-xl bg-slate-800 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700 transition-all active:transform active:translate-y-0.5">
                                 200 USDT
                             </button>
                         </div>
 
-                        <!-- Update Make Deposit button -->
-                        <button type="submit"
-                            class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
+                        <!-- Submit Button -->
+                        <button type="submit" 
+                            class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-xl hover:opacity-90 transition-all active:transform active:translate-y-0.5">
                             Make Deposit
                         </button>
                     </div>
@@ -290,17 +288,14 @@
         </div>
     </div>
 
-    <!-- Add this toast notification HTML before closing body tag -->
-    <div id="successToast"
-        class="pl-4 fixed top-4 right-4 transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-[60]">
-        <div
-            class="bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 text-white px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 pr-12 relative">
+    <!-- Toast Notification -->
+    <div id="successToast" class="pl-4 fixed top-4 right-4 transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-[60]">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 text-white px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 pr-12 relative">
             <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
                 <i class="fas fa-check text-purple-400 text-sm"></i>
             </div>
             <span id="toastMessage" class="font-medium text-slate-200"></span>
-            <button onclick="hideToast()"
-                class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-slate-700/50 rounded-lg transition-colors">
+            <button onclick="hideToast()" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-slate-700/50 rounded-lg transition-colors">
                 <i class="fas fa-times text-slate-400 text-sm"></i>
             </button>
         </div>
