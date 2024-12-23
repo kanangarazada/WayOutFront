@@ -1,6 +1,6 @@
 const logoutBtn = document.getElementById('logoutBtn');
 const logoutModal = document.getElementById('logoutModal');
-const modalContent = logoutModal.querySelector('.balance-card');
+const modalContent = logoutModal.querySelector('.bg-gradient-to-br');
 const cancelLogout = document.getElementById('cancelLogout');
 const confirmLogout = document.getElementById('confirmLogout');
 
@@ -48,7 +48,7 @@ document.addEventListener('keydown', (e) => {
 
 function setupModal(triggerButtonClass, modalId) {
     const modal = document.getElementById(modalId);
-    const modalContent = modal.querySelector('.balance-card');
+    const modalContent = modal.querySelector('.bg-gradient-to-br');
     const triggerButton = document.querySelector(`.${triggerButtonClass}`);
     const closeButton = modal.querySelector('.closeModal');
     

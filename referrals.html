@@ -68,9 +68,9 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 pt-8 pb-24">
         <!-- Stats Card -->
-        <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 mb-6">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 mb-6">
             <div class="grid grid-cols-2 gap-4">
                 <div class="text-center">
                     <span class="text-slate-400 text-sm block mb-1">Total Referrals</span>
@@ -87,17 +87,17 @@
         </div>
 
         <!-- Referral Link Card -->
-        <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 mb-6">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 mb-6">
             <h3 class="text-lg font-semibold mb-4">Your Referral Link</h3>
             <div class="flex gap-2 mb-6">
                 <input type="text" value="https://zypher.com/ref/john123" readonly
-                    class="flex-1 bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-sm text-slate-300">
+                    class="flex-1 bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-sm text-slate-300">
                 <button onclick="copyToClipboard(this, 'https://zypher.com/ref/john123')" 
-                    class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-lg hover:bg-blue-500/20 transition-all active:transform active:translate-y-1 overflow-hidden group disabled:opacity-50 disabled:pointer-events-none">
-                    <i class="fas fa-copy transition-all"></i>
+                    class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-lg hover:bg-blue-500/20 transition-all active:transform active:translate-y-1">
+                    <i class="fas fa-copy"></i>
                 </button>
                 <button onclick="shareLink('https://zypher.com/ref/john123')"
-                    class="w-12 h-12 bg-purple-500/10 text-purple-500 rounded-lg hover:bg-purple-500/20 transition-all active:transform active:translate-y-1 overflow-hidden group">
+                    class="w-12 h-12 bg-purple-500/10 text-purple-500 rounded-lg hover:bg-purple-500/20 transition-all active:transform active:translate-y-1">
                     <i class="fas fa-share-alt"></i>
                 </button>
             </div>
@@ -105,20 +105,20 @@
             <h3 class="text-lg font-semibold mb-4">Referral Code</h3>
             <div class="flex gap-2">
                 <input type="text" value="JOHN123" readonly
-                    class="flex-1 bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-sm text-slate-300">
+                    class="flex-1 bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-sm text-slate-300">
                 <button onclick="copyToClipboard(this, 'JOHN123')"
-                    class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-lg hover:bg-blue-500/20 transition-all active:transform active:translate-y-1 overflow-hidden group disabled:opacity-50 disabled:pointer-events-none">
-                    <i class="fas fa-copy transition-all"></i>
+                    class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-lg hover:bg-blue-500/20 transition-all active:transform active:translate-y-1">
+                    <i class="fas fa-copy"></i>
                 </button>
                 <button onclick="shareLink('JOHN123')"
-                    class="w-12 h-12 bg-purple-500/10 text-purple-500 rounded-lg hover:bg-purple-500/20 transition-all active:transform active:translate-y-1 overflow-hidden group">
+                    class="w-12 h-12 bg-purple-500/10 text-purple-500 rounded-lg hover:bg-purple-500/20 transition-all active:transform active:translate-y-1">
                     <i class="fas fa-share-alt"></i>
                 </button>
             </div>
         </div>
 
         <!-- How it Works -->
-        <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 mb-6">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 mb-6">
             <h3 class="text-lg font-semibold mb-4">How It Works</h3>
             <div class="space-y-4">
                 <div class="flex gap-4">
@@ -152,8 +152,8 @@
         </div>
 
         <!-- Referral List -->
-        <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
-            <button onclick="toggleReferrals()" class="w-full flex items-center justify-between">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl">
+            <button onclick="toggleReferrals()" class="w-full flex items-center justify-between p-6">
                 <div class="flex items-center gap-4">
                     <div class="w-12 h-12 rounded-full bg-indigo-500/10 flex items-center justify-center">
                         <i class="fas fa-users text-indigo-500 text-xl"></i>
@@ -164,9 +164,9 @@
             </button>
             
             <div id="referralList" class="mt-0 max-h-0 overflow-hidden transition-all duration-300 opacity-0">
-                <div class="space-y-4 pt-6">
+                <div class="space-y-4 p-6">
                     <!-- Referral Item -->
-                    <div class="flex items-center justify-between p-4 bg-slate-800/50 rounded-lg">
+                    <div class="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center">
                                 <i class="fas fa-user text-slate-400"></i>
@@ -186,7 +186,7 @@
                     </div>
                     
                     <!-- More Referral Items -->
-                    <div class="flex items-center justify-between p-4 bg-slate-800/50 rounded-lg">
+                    <div class="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center">
                                 <i class="fas fa-user text-slate-400"></i>

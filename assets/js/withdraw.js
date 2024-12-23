@@ -1,8 +1,7 @@
-
 document.getElementById('withdrawForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const successMessage = document.getElementById('successMessage');
-    const messageContent = successMessage.querySelector('.balance-card');
+    const messageContent = successMessage.querySelector('.bg-gradient-to-br');
     
     // Show the modal
     successMessage.classList.remove('pointer-events-none', 'opacity-0');
@@ -14,7 +13,7 @@ document.getElementById('withdrawForm').addEventListener('submit', function(e) {
 
 function hideSuccessMessage() {
     const successMessage = document.getElementById('successMessage');
-    const messageContent = successMessage.querySelector('.balance-card');
+    const messageContent = successMessage.querySelector('.bg-gradient-to-br');
     
     // Animate out
     messageContent.classList.add('scale-95', 'opacity-0');
