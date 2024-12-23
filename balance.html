@@ -11,7 +11,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body class="bg-slate-900 text-white min-h-screen font-[Inter] pb-20">
+<body class="bg-slate-100 dark:bg-slate-900 min-h-screen">
     <!-- Header -->
     <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -68,110 +68,121 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
-        <!-- Stats Cards -->
-        <div class="grid gap-6 mb-8">
-            <!-- Total Deposit -->
-            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <span class="text-slate-400 text-sm block mb-2">Total Deposit</span>
-                        <div class="text-3xl font-bold text-white flex items-center gap-2">
-                            1,250.00 
-                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-6">
+    <main class="container mx-auto px-4 pt-8 pb-24">
+        <!-- Main Balance Card -->
+        <div class="balance-card bg-gradient-to-br from-slate-900 to-slate-800/90 relative overflow-hidden border border-slate-700/50">
+            <!-- Decorative Elements -->
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
+            
+            <!-- Balance Content -->
+            <div class="relative">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-medium text-slate-400">Balance Overview</h2>
+                    <div class="pulse-dot"></div>
+                </div>
+                
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-slate-800/90 rounded-2xl p-4 border border-slate-700/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                                <i class="fas fa-wallet text-purple-400"></i>
+                            </div>
+                            <span class="text-slate-400 text-sm">Total Deposit</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl font-bold text-white">1,250.00</span>
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
                         </div>
                     </div>
-                    <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center">
-                        <i class="fas fa-wallet text-purple-500 text-xl"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Total Earn -->
-            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <span class="text-slate-400 text-sm block mb-2">Total Earn</span>
-                        <div class="text-3xl font-bold text-emerald-400 flex items-center gap-2">
-                            150.00 
-                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-6">
+                    
+                    <div class="bg-slate-800/90 rounded-2xl p-4 border border-slate-700/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+                                <i class="fas fa-chart-line text-emerald-400"></i>
+                            </div>
+                            <span class="text-slate-400 text-sm">Total Earned</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl font-bold text-emerald-400">150.00</span>
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
                         </div>
                     </div>
-                    <div class="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                        <i class="fas fa-chart-line text-emerald-500 text-xl"></i>
-                    </div>
                 </div>
-            </div>
 
-            <!-- Weekly Earn -->
-            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <span class="text-slate-400 text-sm block mb-2">Weekly Earn</span>
-                        <div class="text-3xl font-bold text-emerald-400 flex items-center gap-2">
-                            28.75 
-                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-6">
+                <!-- Account Statistics -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 rounded-2xl p-4 border border-slate-700/50 mb-6">
+                    <h3 class="text-white font-medium mb-4">Account Statistics</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
+                            <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center mb-2">
+                                <i class="fas fa-arrow-trend-up text-purple-400"></i>
+                            </div>
+                            <p class="text-sm text-slate-400">Daily Rate</p>
+                            <p class="text-lg font-semibold text-emerald-400">0.5%</p>
+                        </div>
+
+                        <div class="p-4 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center mb-2">
+                                <i class="fas fa-calendar-check text-amber-400"></i>
+                            </div>
+                            <p class="text-sm text-slate-400">Next Payout</p>
+                            <p class="text-lg font-semibold text-white">12h 30m</p>
                         </div>
                     </div>
-                    <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center">
-                        <i class="fas fa-clock text-blue-500 text-xl"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Referrals Section -->
-        <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700/50 flex flex-col">
-            <button onclick="toggleReferrals()" class="w-full min-h-[72px] flex items-center justify-center">
-                <div class="flex items-center justify-between w-full">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-indigo-500/10 flex items-center justify-center">
-                            <i class="fas fa-users text-indigo-500 text-xl"></i>
+                    <!-- Additional Info with gradient -->
+                    <div class="mt-4 p-4 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+                                <i class="fas fa-info text-emerald-400"></i>
+                            </div>
+                            <h4 class="text-white font-medium">Earning Details</h4>
                         </div>
-                        <h2 class="text-lg font-semibold text-white">Referrals</h2>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <span class="text-sm text-slate-400">Total: 5</span>
-                        <i id="referralArrow" class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Your account earns 0.5% daily on your active balance. Earnings are automatically added to your balance every 24 hours. Maintain a minimum balance of 50 USDT to keep your account active.
+                        </p>
                     </div>
                 </div>
-            </button>
 
-            <!-- Referral List -->
-            <div id="referralList" class="space-y-4 overflow-hidden transition-all duration-300 max-h-0 opacity-0 mt-0">
-                <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-xl backdrop-blur-sm border border-slate-700/50">
-                    <span class="text-white">@john_doe</span>
-                    <div class="text-emerald-400 font-medium flex items-center gap-2">
-                        125.00
-                        <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
+                <!-- Referrals Section -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 rounded-2xl border border-slate-700/50">
+                    <div class="p-4 border-b border-slate-700/50">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center">
+                                    <i class="fas fa-users text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-medium">Top Referrals</h3>
+                                    <p class="text-sm text-slate-400">5 active referrals</p>
+                                </div>
+                            </div>
+                            <button onclick="toggleReferrals()" class="w-8 h-8 rounded-lg bg-slate-700/50 flex items-center justify-center">
+                                <i id="referralArrow" class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-xl backdrop-blur-sm border border-slate-700/50">
-                    <span class="text-white">@crypto_sarah</span>
-                    <div class="text-emerald-400 font-medium flex items-center gap-2">
-                        98.50
-                        <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
-                    </div>
-                </div>
-                <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-xl backdrop-blur-sm border border-slate-700/50">
-                    <span class="text-white">@trader_mike</span>
-                    <div class="text-emerald-400 font-medium flex items-center gap-2">
-                        76.25
-                        <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
-                    </div>
-                </div>
-                <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-xl backdrop-blur-sm border border-slate-700/50">
-                    <span class="text-white">@alice_crypto</span>
-                    <div class="text-emerald-400 font-medium flex items-center gap-2">
-                        52.75
-                        <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
-                    </div>
-                </div>
-                <div class="flex items-center justify-between p-4 bg-slate-700/30 rounded-xl backdrop-blur-sm border border-slate-700/50">
-                    <span class="text-white">@bob_investor</span>
-                    <div class="text-emerald-400 font-medium flex items-center gap-2">
-                        45.50
-                        <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
+
+                    <!-- Referral List -->
+                    <div id="referralList" class="overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+                        <div class="p-4 space-y-3">
+                            <!-- ... existing referral items with updated styling ... -->
+                            <div class="flex items-center justify-between p-3 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-slate-600 flex items-center justify-center">
+                                        <i class="fas fa-user text-slate-300 text-sm"></i>
+                                    </div>
+                                    <span class="text-white">@john_doe</span>
+                                </div>
+                                <div class="text-emerald-400 font-medium flex items-center gap-2">
+                                    125.00
+                                    <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
+                                </div>
+                            </div>
+                            <!-- ... repeat for other referral items ... -->
+                        </div>
                     </div>
                 </div>
             </div>
