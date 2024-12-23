@@ -85,7 +85,7 @@
     <!-- Main Content -->
     <main class="container mx-auto px-4 pt-8 pb-24">
         <!-- Balance Section -->
-        <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50 relative overflow-hidden">
+        <div class="balance-card bg-gradient-to-br from-slate-900 to-slate-800/90 relative overflow-hidden border border-slate-700/50">
             <!-- Decorative Elements -->
             <div class="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -108,14 +108,14 @@
 
                 <!-- Stats Row -->
                 <div class="grid grid-cols-2 gap-4 mt-6 mb-8">
-                    <div class="bg-slate-800/50 rounded-lg p-3">
+                    <div class="bg-slate-800/90 rounded-2xl p-3 border border-slate-700/50">
                         <div class="text-slate-400 text-sm mb-1">Monthly Growth</div>
                         <div class="flex items-center gap-1">
                             <i class="fas fa-chart-line text-emerald-500"></i>
                             <span class="text-emerald-500 font-semibold">+12%</span>
                         </div>
                     </div>
-                    <div class="bg-slate-800/50 rounded-lg p-3">
+                    <div class="bg-slate-800/90 rounded-2xl p-3 border border-slate-700/50">
                         <div class="text-slate-400 text-sm mb-1">Active Days</div>
                         <div class="flex items-center gap-1">
                             <i class="fas fa-clock text-blue-400"></i>
@@ -125,41 +125,19 @@
                 </div>
 
                 <!-- Action Buttons -->
-                <div class="flex gap-3">
-                    <a href="balance.html" class="flex-1">
-                        <button class="w-full bg-slate-800/50 hover:bg-slate-700/50 text-white rounded-lg py-3 px-4 font-medium transition-colors flex items-center justify-center gap-2">
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="balance.html">
+                        <button class="w-full bg-slate-800/90 hover:bg-slate-700 text-white rounded-2xl py-3 px-4 font-medium transition-colors flex items-center justify-center gap-2 border border-slate-700/50">
                             <i class="fas fa-chart-bar text-slate-400"></i>
                             View Details
                         </button>
                     </a>
-                    <button class="flex-1 deposit-btn">
+                    <button class="rounded-2xl deposit-btn w-full">
                         <i class="fas fa-plus-circle mr-2"></i>
                         Deposit
                     </button>
                 </div>
             </div>
-        </div>
-
-        <!-- Quick Actions -->
-        <div class="grid grid-cols-2 gap-4 mt-8">
-            <a href="referrals.html" class="group h-full">
-                <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 hover:border-purple-500/30 transition-colors h-full">
-                    <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mb-3">
-                        <i class="fas fa-users text-purple-400"></i>
-                    </div>
-                    <h3 class="font-medium text-white mb-1">Referrals</h3>
-                    <p class="text-sm text-slate-400">Invite friends & earn</p>
-                </div>
-            </a>
-            <a href="withdraw.html" class="group h-full">
-                <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 hover:border-blue-500/30 transition-colors h-full">
-                    <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3">
-                        <i class="fas fa-money-bill-wave text-blue-400"></i>
-                    </div>
-                    <h3 class="font-medium text-white mb-1">Withdraw</h3>
-                    <p class="text-sm text-slate-400">Cash out earnings</p>
-                </div>
-            </a>
         </div>
 
         <!-- Quick Stats Grid -->
@@ -174,13 +152,6 @@
                     <p class="text-lg font-semibold text-white">$1,234.56</p>
                 </div>
                 <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
-                    <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center mb-2">
-                        <i class="fas fa-user-plus text-purple-400"></i>
-                    </div>
-                    <p class="text-sm text-slate-400">Referrals</p>
-                    <p class="text-lg font-semibold text-white">24</p>
-                </div>
-                <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
                     <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center mb-2">
                         <i class="fas fa-arrow-down text-blue-400"></i>
                     </div>
@@ -193,6 +164,44 @@
                     </div>
                     <p class="text-sm text-slate-400">Deposits</p>
                     <p class="text-lg font-semibold text-white">8</p>
+                </div>
+                <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
+                    <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center mb-2">
+                        <i class="fas fa-user-plus text-purple-400"></i>
+                    </div>
+                    <p class="text-sm text-slate-400">Referrals</p>
+                    <p class="text-lg font-semibold text-white">24</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Guide -->
+        <div class="mt-8">
+            <div class="balance-card bg-gradient-to-br from-slate-800 to-slate-800/50">
+                <h2 class="text-xl font-semibold text-white mb-4">Quick Guide</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex-shrink-0 flex items-center justify-center mt-1">
+                            <i class="fas fa-info text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-medium mb-1">How it Works</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Earn passive income by keeping your balance active. Your earnings increase based on your deposit amount and activity time.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex-shrink-0 flex items-center justify-center mt-1">
+                            <i class="fas fa-gift text-emerald-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-medium mb-1">Bonus Earnings</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Invite friends using your referral link to earn additional rewards. Each active referral increases your earning potential.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
