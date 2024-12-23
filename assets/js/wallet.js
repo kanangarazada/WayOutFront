@@ -1,14 +1,13 @@
-
 class DepositModalHandler {
     constructor() {
         // Modal elements
         this.depositModal = document.getElementById('depositModal');
-        this.modalContent = this.depositModal.querySelector('.balance-card');
+        this.modalContent = this.depositModal.querySelector('.bg-gradient-to-br');
         this.closeButton = document.getElementById('closeDepositModalBtn');
         this.depositForm = document.getElementById('depositForm');
         this.amountInput = document.getElementById('depositAmount');
         
-        // Get both deposit buttons (Add USDT and Deposit)
+        // Get deposit buttons
         this.depositButtons = document.querySelectorAll('.deposit-trigger');
         
         this.isAnimating = false;
@@ -86,12 +85,12 @@ class ModalHandler {
     constructor() {
         // Modal elements
         this.earnModal = document.getElementById('earnModal');
-        this.modalContent = this.earnModal.querySelector('.balance-card');
+        this.modalContent = this.earnModal.querySelector('.bg-gradient-to-br');
         this.closeButton = document.getElementById('closeModalBtn');
         this.earnForm = document.getElementById('earnForm');
         this.amountInput = document.getElementById('earnAmount');
         
-        // Get both deposit buttons (Add USDT and Deposit)
+        // Get earn buttons
         this.earnButtons = document.querySelectorAll('.earn-trigger');
         
         this.isAnimating = false;
