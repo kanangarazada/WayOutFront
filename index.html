@@ -85,18 +85,19 @@
     <!-- Main Content -->
     <main class="container mx-auto px-4 pt-8 pb-24">
         <!-- Balance Section -->
-        <div class="balance-card bg-gradient-to-br from-slate-900 to-slate-800/90 relative overflow-hidden border border-slate-700/50">
+        <div
+            class="balance-card bg-gradient-to-br from-slate-900 to-slate-800/90 relative overflow-hidden border border-slate-700/50">
             <!-- Decorative Elements -->
             <div class="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
-            
+
             <!-- Balance Content -->
             <div class="relative">
                 <div class="flex justify-between items-center mb-2">
                     <h2 class="text-lg font-medium text-slate-400">Total Balance</h2>
                     <div class="pulse-dot"></div>
                 </div>
-                
+
                 <!-- Main Balance -->
                 <div class="flex items-baseline gap-1 mb-1">
                     <span class="text-4xl font-bold text-white">$100</span>
@@ -127,14 +128,17 @@
                 <!-- Action Buttons -->
                 <div class="grid grid-cols-2 gap-3">
                     <a href="balance.html">
-                        <button class="w-full bg-slate-800/90 hover:bg-slate-700 text-white rounded-2xl py-3 px-4 font-medium transition-colors flex items-center justify-center gap-2 border border-slate-700/50">
+                        <button
+                            class="w-full bg-slate-800/90 hover:bg-slate-700 text-white rounded-2xl py-3 px-4 font-medium transition-colors flex items-center justify-center gap-2 border border-slate-700/50">
                             <i class="fas fa-chart-bar text-slate-400"></i>
                             View Details
                         </button>
                     </a>
                     <button class="rounded-2xl deposit-btn w-full">
-                        <i class="fas fa-plus-circle mr-2"></i>
-                        Deposit
+                        <span class="relative z-10">
+                            <i class="fas fa-plus-circle mr-2"></i>
+                            Deposit
+                        </span>
                     </button>
                 </div>
             </div>
@@ -181,24 +185,28 @@
                 <h2 class="text-xl font-semibold text-white mb-4">Quick Guide</h2>
                 <div class="space-y-4">
                     <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex-shrink-0 flex items-center justify-center mt-1">
+                        <div
+                            class="w-8 h-8 rounded-lg bg-blue-500/20 flex-shrink-0 flex items-center justify-center mt-1">
                             <i class="fas fa-info text-blue-400"></i>
                         </div>
                         <div>
                             <h3 class="text-white font-medium mb-1">How it Works</h3>
                             <p class="text-sm text-slate-400 leading-relaxed">
-                                Earn passive income by keeping your balance active. Your earnings increase based on your deposit amount and activity time.
+                                Earn passive income by keeping your balance active. Your earnings increase based on your
+                                deposit amount and activity time.
                             </p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex-shrink-0 flex items-center justify-center mt-1">
+                        <div
+                            class="w-8 h-8 rounded-lg bg-emerald-500/20 flex-shrink-0 flex items-center justify-center mt-1">
                             <i class="fas fa-gift text-emerald-400"></i>
                         </div>
                         <div>
                             <h3 class="text-white font-medium mb-1">Bonus Earnings</h3>
                             <p class="text-sm text-slate-400 leading-relaxed">
-                                Invite friends using your referral link to earn additional rewards. Each active referral increases your earning potential.
+                                Invite friends using your referral link to earn additional rewards. Each active referral
+                                increases your earning potential.
                             </p>
                         </div>
                     </div>
@@ -232,9 +240,11 @@
         </div>
     </nav>
     <!-- Add this modal HTML before closing body tag -->
-    <div id="depositModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div id="depositModal"
+        class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
         <div class="container mx-auto px-4 h-full flex items-center justify-center">
-            <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 w-full max-w-md transform scale-95 translate-y-4 transition-all duration-300 rounded-2xl">
+            <div
+                class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 w-full max-w-md transform scale-95 translate-y-4 transition-all duration-300 rounded-2xl">
                 <!-- Modal Header -->
                 <div class="flex justify-between items-center mb-6 p-6">
                     <h3 class="text-xl font-semibold text-white">Deposit USDT</h3>
@@ -252,7 +262,7 @@
                                 Amount
                             </label>
                             <div class="relative">
-                                <input type="number" id="depositAmount" 
+                                <input type="number" id="depositAmount"
                                     class="w-full bg-slate-800 border border-slate-700/50 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                                     placeholder="0.00">
                                 <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
@@ -263,22 +273,22 @@
 
                         <!-- Quick Amount Buttons -->
                         <div class="grid grid-cols-3 gap-2 mb-4">
-                            <button type="button" onclick="setAmount(50)" 
+                            <button type="button" onclick="setAmount(50)"
                                 class="h-9 px-3 rounded-xl bg-slate-800 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700 transition-all active:transform active:translate-y-0.5">
                                 50 USDT
                             </button>
-                            <button type="button" onclick="setAmount(100)" 
+                            <button type="button" onclick="setAmount(100)"
                                 class="h-9 px-3 rounded-xl bg-slate-800 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700 transition-all active:transform active:translate-y-0.5">
                                 100 USDT
                             </button>
-                            <button type="button" onclick="setAmount(200)" 
+                            <button type="button" onclick="setAmount(200)"
                                 class="h-9 px-3 rounded-xl bg-slate-800 border border-slate-700/50 text-xs font-medium text-white hover:bg-slate-700 transition-all active:transform active:translate-y-0.5">
                                 200 USDT
                             </button>
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" 
+                        <button type="submit"
                             class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-xl hover:opacity-90 transition-all active:transform active:translate-y-0.5">
                             Make Deposit
                         </button>
@@ -289,13 +299,16 @@
     </div>
 
     <!-- Toast Notification -->
-    <div id="successToast" class="pl-4 fixed top-4 right-4 transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-[60]">
-        <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 text-white px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 pr-12 relative">
+    <div id="successToast"
+        class="pl-4 fixed top-4 right-4 transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-[60]">
+        <div
+            class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 text-white px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 pr-12 relative">
             <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
                 <i class="fas fa-check text-purple-400 text-sm"></i>
             </div>
             <span id="toastMessage" class="font-medium text-slate-200"></span>
-            <button onclick="hideToast()" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-slate-700/50 rounded-lg transition-colors">
+            <button onclick="hideToast()"
+                class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-slate-700/50 rounded-lg transition-colors">
                 <i class="fas fa-times text-slate-400 text-sm"></i>
             </button>
         </div>

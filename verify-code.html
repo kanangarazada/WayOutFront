@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Verify Code - Zypher App</title>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="bg-slate-900 min-h-screen font-[Inter]" style="background-color: rgb(15 23 42);">
     <!-- Header -->
     <header class="fixed top-0 w-full bg-slate-900/80 backdrop-blur-sm z-50">
@@ -27,44 +29,44 @@
 
                 <!-- Language Modal -->
                 <div id="languageModal"
-                    class="hidden absolute top-16 right-4 w-48 bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 shadow-lg">
+                    class="hidden absolute top-16 right-4 w-48 bg-slate-900 rounded-xl border border-slate-700/50 shadow-lg">
                     <div class="p-2 space-y-1">
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded"
                                 alt="English">
                             English
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded"
                                 alt="Turkish">
                             Türkçe
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded"
                                 alt="Russian">
                             Русский
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded"
                                 alt="Spanish">
                             Español
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
                             Français
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
                             Deutsch
                         </button>
                         <button
-                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded"
                                 alt="Chinese">
                             中文
@@ -87,35 +89,18 @@
                 <form class="space-y-6">
                     <!-- Code Input Section -->
                     <div class="flex justify-between gap-4">
-                        <input type="tel" 
-                            inputmode="numeric" 
-                            pattern="[0-9]*"
-                            maxlength="1" 
+                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
                             class="w-14 h-14 text-center text-2xl font-bold rounded-lg bg-slate-800/90 border border-slate-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            oninput="handleInput(this, 0)" 
-                            onkeydown="handleBackspace(this, 0)"
-                            autofocus>
-                        <input type="tel" 
-                            inputmode="numeric" 
-                            pattern="[0-9]*"
-                            maxlength="1" 
+                            oninput="handleInput(this, 0)" onkeydown="handleBackspace(this, 0)" autofocus>
+                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
                             class="w-14 h-14 text-center text-2xl font-bold rounded-lg bg-slate-800/90 border border-slate-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            oninput="handleInput(this, 1)"
-                            onkeydown="handleBackspace(this, 1)">
-                        <input type="tel" 
-                            inputmode="numeric" 
-                            pattern="[0-9]*"
-                            maxlength="1" 
+                            oninput="handleInput(this, 1)" onkeydown="handleBackspace(this, 1)">
+                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
                             class="w-14 h-14 text-center text-2xl font-bold rounded-lg bg-slate-800/90 border border-slate-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            oninput="handleInput(this, 2)"
-                            onkeydown="handleBackspace(this, 2)">
-                        <input type="tel" 
-                            inputmode="numeric" 
-                            pattern="[0-9]*"
-                            maxlength="1" 
+                            oninput="handleInput(this, 2)" onkeydown="handleBackspace(this, 2)">
+                        <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="1"
                             class="w-14 h-14 text-center text-2xl font-bold rounded-lg bg-slate-800/90 border border-slate-700/50 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            oninput="handleInput(this, 3)"
-                            onkeydown="handleBackspace(this, 3)">
+                            oninput="handleInput(this, 3)" onkeydown="handleBackspace(this, 3)">
                     </div>
 
                     <!-- Add error message div (initially hidden) -->
@@ -130,8 +115,9 @@
 
                 <div class="text-center mt-6 space-y-4">
                     <p class="text-sm text-slate-400">
-                        Didn't receive the code? 
-                        <button id="resendButton" class="text-blue-400 hover:text-blue-300 font-medium hidden" onclick="window.location.href='forgot-password.html'">
+                        Didn't receive the code?
+                        <button id="resendButton" class="text-blue-400 hover:text-blue-300 font-medium hidden"
+                            onclick="window.location.href='forgot-password.html'">
                             Resend Code
                         </button>
                         <span id="countdown" class="text-blue-400 font-medium">
@@ -151,19 +137,23 @@
                     <span class="text-slate-400 text-sm">Need Support?</span>
                     <div class="h-[1px] w-16 bg-gradient-to-l from-transparent to-slate-700/50"></div>
                 </div>
-                
+
                 <div class="flex items-center justify-center gap-8">
                     <a href="#" class="group flex flex-col items-center transition-all duration-300">
-                        <div class="w-14 h-14 rounded-2xl bg-slate-800/90 backdrop-blur-sm flex items-center justify-center group-hover:bg-purple-500/20 group-hover:scale-110 transition-all duration-300 border border-slate-700/50 group-hover:border-purple-500/50">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-slate-800/90 backdrop-blur-sm flex items-center justify-center group-hover:bg-purple-500/20 group-hover:scale-110 transition-all duration-300 border border-slate-700/50 group-hover:border-purple-500/50">
                             <i class="fab fa-instagram text-2xl text-slate-400 group-hover:text-purple-400"></i>
                         </div>
-                        <span class="mt-3 text-xs font-medium text-slate-400 group-hover:text-purple-400 transition-colors duration-300">Instagram</span>
+                        <span
+                            class="mt-3 text-xs font-medium text-slate-400 group-hover:text-purple-400 transition-colors duration-300">Instagram</span>
                     </a>
                     <a href="#" class="group flex flex-col items-center transition-all duration-300">
-                        <div class="w-14 h-14 rounded-2xl bg-slate-800/90 backdrop-blur-sm flex items-center justify-center group-hover:bg-blue-500/20 group-hover:scale-110 transition-all duration-300 border border-slate-700/50 group-hover:border-blue-500/50">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-slate-800/90 backdrop-blur-sm flex items-center justify-center group-hover:bg-blue-500/20 group-hover:scale-110 transition-all duration-300 border border-slate-700/50 group-hover:border-blue-500/50">
                             <i class="fab fa-telegram text-2xl text-slate-400 group-hover:text-blue-400"></i>
                         </div>
-                        <span class="mt-3 text-xs font-medium text-slate-400 group-hover:text-blue-400 transition-colors duration-300">Telegram</span>
+                        <span
+                            class="mt-3 text-xs font-medium text-slate-400 group-hover:text-blue-400 transition-colors duration-300">Telegram</span>
                     </a>
                 </div>
             </div>
@@ -176,7 +166,7 @@
         function handleInput(input, index) {
             // Only allow numbers
             input.value = input.value.replace(/[^0-9]/g, '');
-            
+
             // If we have a number and there's a next input, focus it
             if (input.value.length === 1 && index < 3) {
                 const inputs = document.querySelectorAll('input[type="tel"]');
@@ -196,11 +186,11 @@
         }
 
         // Add paste handler for the entire container
-        document.querySelector('.flex').addEventListener('paste', function(e) {
+        document.querySelector('.flex').addEventListener('paste', function (e) {
             e.preventDefault();
             const paste = e.clipboardData.getData('text');
             const inputs = document.querySelectorAll('input[type="tel"]');
-            
+
             // Only process if we have a 4-digit number
             if (/^\d{4}$/.test(paste)) {
                 inputs.forEach((input, i) => {
@@ -212,4 +202,5 @@
         });
     </script>
 </body>
-</html> 
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/toastr.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body class="bg-slate-900 text-white min-h-screen font-[Inter]">
     <!-- Header -->
     <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
@@ -23,39 +25,53 @@
             </a>
             <div class="flex items-center gap-2">
                 <!-- Language Selector -->
-                <button id="languageBtn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
+                <button id="languageBtn"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
                     <i class="fas fa-globe text-slate-400"></i>
                 </button>
-                
+
                 <!-- Language Modal -->
-                <div id="languageModal" class="hidden absolute top-16 right-4 w-48 bg-slate-800 rounded-xl border border-slate-700/50 shadow-lg">
+                <div id="languageModal"
+                    class="hidden absolute top-16 right-4 w-48 bg-slate-900 rounded-xl border border-slate-700/50 shadow-lg">
                     <div class="p-2 space-y-1">
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded" alt="English">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded"
+                                alt="English">
                             English
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded" alt="Turkish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded"
+                                alt="Turkish">
                             Türkçe
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded" alt="Russian">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded"
+                                alt="Russian">
                             Русский
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded" alt="Spanish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded"
+                                alt="Spanish">
                             Español
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
                             Français
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
                             Deutsch
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded" alt="Chinese">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded"
+                                alt="Chinese">
                             中文
                         </button>
                     </div>
@@ -88,7 +104,7 @@
             <!-- Account Settings -->
             <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6">
                 <h2 class="text-lg font-semibold mb-4">Settings</h2>
-                
+
                 <!-- Email -->
                 <div class="flex items-center justify-between py-3 border-b border-slate-700/50">
                     <div>
@@ -111,7 +127,7 @@
             <!-- Social Links -->
             <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6">
                 <h2 class="text-lg font-semibold mb-4">Support</h2>
-                
+
                 <!-- Telegram -->
                 <div class="flex items-center justify-between py-3 border-b border-slate-700/50">
                     <div class="flex items-center gap-3">
@@ -147,7 +163,7 @@
                     <h2 class="text-lg font-semibold">Transaction History</h2>
                     <a href="transactions.html" class="text-xs text-blue-400 hover:text-blue-300">View All</a>
                 </div>
-                
+
                 <!-- Recent Transactions Preview -->
                 <div class="space-y-3">
                     <!-- Transaction Item -->
@@ -185,14 +201,16 @@
             </div>
 
             <!-- Logout Button -->
-            <button id="logoutBtn" class="w-full px-4 py-3 rounded-lg border border-red-500/20 text-red-400 hover:bg-red-500/10 transition-all active:transform active:translate-y-1 text-sm">
+            <button id="logoutBtn"
+                class="w-full px-4 py-3 rounded-lg border border-red-500/20 text-red-400 hover:bg-red-500/10 transition-all active:transform active:translate-y-1 text-sm">
                 Log Out
             </button>
         </div>
     </main>
 
     <!-- Bottom Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
         <div class="container mx-auto px-4">
             <div class="flex justify-around py-2">
                 <a href="index.html" class="nav-item">
@@ -216,9 +234,11 @@
     </nav>
 
     <!-- Add this modal before closing body tag -->
-    <div id="logoutModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div id="logoutModal"
+        class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
         <div class="container mx-auto px-4 h-full flex items-center justify-center">
-            <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 w-full max-w-sm transform scale-95 translate-y-4 transition-all duration-300">
+            <div
+                class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 w-full max-w-sm transform scale-95 translate-y-4 transition-all duration-300">
                 <!-- Modal Content -->
                 <div class="text-center">
                     <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-4">
@@ -226,12 +246,14 @@
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-2">Log Out</h3>
                     <p class="text-sm text-slate-400 mb-6">Are you sure you want to log out?</p>
-                    
+
                     <div class="flex gap-3">
-                        <button id="cancelLogout" class="flex-1 px-4 py-3 rounded-lg border border-slate-700 text-slate-300 hover:bg-slate-800 transition-all active:transform active:translate-y-1">
+                        <button id="cancelLogout"
+                            class="flex-1 px-4 py-3 rounded-lg border border-slate-700 text-slate-300 hover:bg-slate-800 transition-all active:transform active:translate-y-1">
                             Cancel
                         </button>
-                        <button id="confirmLogout" class="flex-1 px-4 py-3 rounded-lg bg-red-500 text-white hover:bg-red-600 transition-all active:transform active:translate-y-1">
+                        <button id="confirmLogout"
+                            class="flex-1 px-4 py-3 rounded-lg bg-red-500 text-white hover:bg-red-600 transition-all active:transform active:translate-y-1">
                             Log Out
                         </button>
                     </div>
@@ -243,36 +265,39 @@
     <!-- Add these modals before closing body tag -->
 
     <!-- Email Change Modal -->
-    <div id="emailModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div id="emailModal"
+        class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
         <div class="container mx-auto px-4 h-full flex items-center justify-center">
-            <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 w-full max-w-sm transform scale-95 translate-y-4 transition-all duration-300">
+            <div
+                class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 w-full max-w-sm transform scale-95 translate-y-4 transition-all duration-300">
                 <div class="flex justify-between items-center mb-6">
                     <h3 class="text-lg font-semibold text-white">Change Email</h3>
                     <button class="closeModal text-slate-400 hover:text-white transition-colors">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-                
+
                 <form class="space-y-4">
                     <div>
                         <label class="block text-sm font-medium text-slate-400 mb-2">Current Email</label>
-                        <input type="email" value="john.doe@example.com" disabled 
+                        <input type="email" value="john.doe@example.com" disabled
                             class="w-full bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-slate-400">
                     </div>
-                    
+
                     <div>
                         <label class="block text-sm font-medium text-slate-400 mb-2">New Email</label>
                         <input type="email" placeholder="Enter new email" required
                             class="w-full bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
                     </div>
-                    
+
                     <div>
                         <label class="block text-sm font-medium text-slate-400 mb-2">Password</label>
                         <input type="password" placeholder="Confirm with password" required
                             class="w-full bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
                     </div>
 
-                    <button type="submit" class="w-full bg-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-600 transition-all active:transform active:translate-y-1">
+                    <button type="submit"
+                        class="w-full bg-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-600 transition-all active:transform active:translate-y-1">
                         Update Email
                     </button>
                 </form>
@@ -281,36 +306,39 @@
     </div>
 
     <!-- Password Change Modal -->
-    <div id="passwordModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div id="passwordModal"
+        class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
         <div class="container mx-auto px-4 h-full flex items-center justify-center">
-            <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 w-full max-w-sm transform scale-95 translate-y-4 transition-all duration-300">
+            <div
+                class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 w-full max-w-sm transform scale-95 translate-y-4 transition-all duration-300">
                 <div class="flex justify-between items-center mb-6">
                     <h3 class="text-lg font-semibold text-white">Change Password</h3>
                     <button class="closeModal text-slate-400 hover:text-white transition-colors">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-                
+
                 <form class="space-y-4">
                     <div>
                         <label class="block text-sm font-medium text-slate-400 mb-2">Current Password</label>
                         <input type="password" placeholder="Enter current password" required
                             class="w-full bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
                     </div>
-                    
+
                     <div>
                         <label class="block text-sm font-medium text-slate-400 mb-2">New Password</label>
                         <input type="password" placeholder="Enter new password" required
                             class="w-full bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
                     </div>
-                    
+
                     <div>
                         <label class="block text-sm font-medium text-slate-400 mb-2">Confirm New Password</label>
                         <input type="password" placeholder="Confirm new password" required
                             class="w-full bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
                     </div>
 
-                    <button type="submit" class="w-full bg-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-600 transition-all active:transform active:translate-y-1">
+                    <button type="submit"
+                        class="w-full bg-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-600 transition-all active:transform active:translate-y-1">
                         Update Password
                     </button>
                 </form>
@@ -318,14 +346,17 @@
         </div>
     </div>
 
-    <!-- Add this toast notification HTML before closing body tag -->
-    <div id="successToast" class="pl-4 fixed top-4 right-4 transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-[60]">
-        <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-xl shadow-lg flex items-center gap-3 pr-12 relative p-4">
+    <!-- Toast Notification -->
+    <div id="successToast"
+        class="pl-4 fixed top-4 right-4 transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-[60]">
+        <div
+            class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 text-white px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 pr-12 relative">
             <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
                 <i class="fas fa-check text-purple-400 text-sm"></i>
             </div>
             <span id="toastMessage" class="font-medium text-slate-200"></span>
-            <button onclick="hideToast()" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-slate-700/50 rounded-lg transition-colors">
+            <button onclick="hideToast()"
+                class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-slate-700/50 rounded-lg transition-colors">
                 <i class="fas fa-times text-slate-400 text-sm"></i>
             </button>
         </div>
@@ -336,4 +367,5 @@
     <script src="assets/js/langSupport.js"></script>
     <script src="assets/js/toastr.js"></script>
 </body>
-</html> 
+
+</html>

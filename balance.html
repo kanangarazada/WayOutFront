@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body class="bg-slate-100 dark:bg-slate-900 min-h-screen">
     <!-- Header -->
     <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
@@ -22,39 +24,53 @@
             </a>
             <div class="flex items-center gap-2">
                 <!-- Language Selector -->
-                <button id="languageBtn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
+                <button id="languageBtn"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
                     <i class="fas fa-globe text-slate-400"></i>
                 </button>
-                
+
                 <!-- Language Modal -->
-                <div id="languageModal" class="hidden absolute top-16 right-4 w-48 bg-slate-800 rounded-xl border border-slate-700/50 shadow-lg">
+                <div id="languageModal"
+                    class="hidden absolute top-16 right-4 w-48 bg-slate-900 rounded-xl border border-slate-700/50 shadow-lg">
                     <div class="p-2 space-y-1">
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded" alt="English">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded"
+                                alt="English">
                             English
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded" alt="Turkish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded"
+                                alt="Turkish">
                             Türkçe
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded" alt="Russian">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded"
+                                alt="Russian">
                             Русский
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded" alt="Spanish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded"
+                                alt="Spanish">
                             Español
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
                             Français
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
                             Deutsch
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded" alt="Chinese">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded"
+                                alt="Chinese">
                             中文
                         </button>
                     </div>
@@ -70,18 +86,19 @@
     <!-- Main Content -->
     <main class="container mx-auto px-4 pt-8 pb-24">
         <!-- Main Balance Card -->
-        <div class="balance-card bg-gradient-to-br from-slate-900 to-slate-800/90 relative overflow-hidden border border-slate-700/50">
+        <div
+            class="balance-card bg-gradient-to-br from-slate-900 to-slate-800/90 relative overflow-hidden border border-slate-700/50">
             <!-- Decorative Elements -->
             <div class="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
-            
+
             <!-- Balance Content -->
             <div class="relative">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-lg font-medium text-slate-400">Balance Overview</h2>
                     <div class="pulse-dot"></div>
                 </div>
-                
+
                 <!-- Stats Grid -->
                 <div class="grid grid-cols-2 gap-4 mb-6">
                     <div class="bg-slate-800/90 rounded-2xl p-4 border border-slate-700/50">
@@ -96,7 +113,7 @@
                             <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-5">
                         </div>
                     </div>
-                    
+
                     <div class="bg-slate-800/90 rounded-2xl p-4 border border-slate-700/50">
                         <div class="flex items-center gap-3 mb-3">
                             <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">
@@ -112,10 +129,12 @@
                 </div>
 
                 <!-- Account Statistics -->
-                <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 rounded-2xl p-4 border border-slate-700/50 mb-6">
+                <div
+                    class="bg-gradient-to-br from-slate-900 to-slate-800/90 rounded-2xl p-4 border border-slate-700/50 mb-6">
                     <h3 class="text-white font-medium mb-4">Account Statistics</h3>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="p-4 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
+                        <div
+                            class="p-4 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
                             <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center mb-2">
                                 <i class="fas fa-arrow-trend-up text-purple-400"></i>
                             </div>
@@ -123,7 +142,8 @@
                             <p class="text-lg font-semibold text-emerald-400">0.5%</p>
                         </div>
 
-                        <div class="p-4 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
+                        <div
+                            class="p-4 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
                             <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center mb-2">
                                 <i class="fas fa-calendar-check text-amber-400"></i>
                             </div>
@@ -133,7 +153,8 @@
                     </div>
 
                     <!-- Additional Info with gradient -->
-                    <div class="mt-4 p-4 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
+                    <div
+                        class="mt-4 p-4 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
                         <div class="flex items-center gap-3 mb-2">
                             <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
                                 <i class="fas fa-info text-emerald-400"></i>
@@ -141,7 +162,9 @@
                             <h4 class="text-white font-medium">Earning Details</h4>
                         </div>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Your account earns 0.5% daily on your active balance. Earnings are automatically added to your balance every 24 hours. Maintain a minimum balance of 50 USDT to keep your account active.
+                            Your account earns 0.5% daily on your active balance. Earnings are automatically added to
+                            your balance every 24 hours. Maintain a minimum balance of 50 USDT to keep your account
+                            active.
                         </p>
                     </div>
                 </div>
@@ -159,8 +182,10 @@
                                     <p class="text-sm text-slate-400">5 active referrals</p>
                                 </div>
                             </div>
-                            <button onclick="toggleReferrals()" class="w-8 h-8 rounded-lg bg-slate-700/50 flex items-center justify-center">
-                                <i id="referralArrow" class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                            <button onclick="toggleReferrals()"
+                                class="w-8 h-8 rounded-lg bg-slate-700/50 flex items-center justify-center">
+                                <i id="referralArrow"
+                                    class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
                             </button>
                         </div>
                     </div>
@@ -169,7 +194,8 @@
                     <div id="referralList" class="overflow-hidden transition-all duration-300 max-h-0 opacity-0">
                         <div class="p-4 space-y-3">
                             <!-- ... existing referral items with updated styling ... -->
-                            <div class="flex items-center justify-between p-3 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
+                            <div
+                                class="flex items-center justify-between p-3 bg-gradient-to-br from-slate-800/90 to-slate-700/30 rounded-xl border border-slate-700/50">
                                 <div class="flex items-center gap-3">
                                     <div class="w-8 h-8 rounded-full bg-slate-600 flex items-center justify-center">
                                         <i class="fas fa-user text-slate-300 text-sm"></i>
@@ -190,7 +216,8 @@
     </main>
 
     <!-- Bottom Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
         <div class="container mx-auto px-4">
             <div class="flex justify-around py-2">
                 <a href="index.html" class="nav-item">
@@ -215,4 +242,5 @@
     <script src="assets/js/balance.js"></script>
     <script src="assets/js/langSupport.js"></script>
 </body>
-</html> 
+
+</html>

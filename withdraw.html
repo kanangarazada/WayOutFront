@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body class="bg-slate-900 text-white min-h-screen font-[Inter] pb-20">
     <!-- Header -->
     <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
@@ -22,39 +24,53 @@
             </a>
             <div class="flex items-center gap-2">
                 <!-- Language Selector -->
-                <button id="languageBtn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
+                <button id="languageBtn"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
                     <i class="fas fa-globe text-slate-400"></i>
                 </button>
-                
+
                 <!-- Language Modal -->
-                <div id="languageModal" class="hidden absolute top-16 right-4 w-48 bg-slate-800 rounded-xl border border-slate-700/50 shadow-lg">
+                <div id="languageModal"
+                    class="hidden absolute top-16 right-4 w-48 bg-slate-900 rounded-xl border border-slate-700/50 shadow-lg">
                     <div class="p-2 space-y-1">
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded" alt="English">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded"
+                                alt="English">
                             English
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded" alt="Turkish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded"
+                                alt="Turkish">
                             Türkçe
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded" alt="Russian">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded"
+                                alt="Russian">
                             Русский
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded" alt="Spanish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded"
+                                alt="Spanish">
                             Español
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
                             Français
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
                             Deutsch
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded" alt="Chinese">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded"
+                                alt="Chinese">
                             中文
                         </button>
                     </div>
@@ -75,11 +91,12 @@
                 <div>
                     <span class="text-slate-400 text-sm block mb-2">Available for Withdrawal</span>
                     <div class="text-3xl font-bold text-white flex items-center gap-2">
-                        1,250.00 
+                        1,250.00
                         <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-6">
                     </div>
                 </div>
-                <div class="flex items-center text-sm text-slate-400 border-t border-slate-700/50 pt-4 sm:border-t-0 sm:pt-0">
+                <div
+                    class="flex items-center text-sm text-slate-400 border-t border-slate-700/50 pt-4 sm:border-t-0 sm:pt-0">
                     <i class="fas fa-clock mr-2"></i>
                     Processing time: 3 business days
                 </div>
@@ -94,7 +111,7 @@
                     <label for="walletAddress" class="block text-sm font-medium text-slate-400 mb-2">
                         Wallet Address
                     </label>
-                    <input type="text" id="walletAddress" 
+                    <input type="text" id="walletAddress"
                         class="w-full bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                         placeholder="Enter your USDT wallet address">
                 </div>
@@ -105,7 +122,7 @@
                         Amount
                     </label>
                     <div class="relative">
-                        <input type="number" id="amount" 
+                        <input type="number" id="amount"
                             class="w-full bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                             placeholder="0.00">
                         <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
@@ -115,19 +132,21 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" 
+                <button type="submit"
                     class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
                     Withdraw
                 </button>
 
                 <!-- Network Info -->
-                <div class="bg-gradient-to-br from-slate-800/90 to-slate-800/50 border border-slate-700/50 rounded-xl p-4">
+                <div
+                    class="bg-gradient-to-br from-slate-800/90 to-slate-800/50 border border-slate-700/50 rounded-xl p-4">
                     <div class="flex items-start space-x-2">
                         <i class="fas fa-network-wired text-purple-400 mt-0.5 text-sm"></i>
                         <div>
                             <h4 class="text-purple-400 font-medium text-sm mb-0.5">Important Note</h4>
                             <p class="text-slate-300 text-xs leading-relaxed">
-                                Please make sure to enter an Ethereum network wallet address. Using addresses from other networks may result in permanent loss of funds.
+                                Please make sure to enter an Ethereum network wallet address. Using addresses from other
+                                networks may result in permanent loss of funds.
                             </p>
                         </div>
                     </div>
@@ -136,14 +155,16 @@
         </div>
 
         <!-- Success Message (Hidden by default) -->
-        <div id="successMessage" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
-            <div class="balance-card bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 max-w-sm mx-4 text-center scale-95 opacity-0 transition-all duration-300">
+        <div id="successMessage"
+            class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+            <div
+                class="balance-card bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-2xl p-6 max-w-sm mx-4 text-center scale-95 opacity-0 transition-all duration-300">
                 <div class="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-4">
                     <i class="fas fa-check text-3xl text-emerald-500"></i>
                 </div>
                 <h3 class="text-xl font-semibold text-white mb-2">Withdrawal Successful</h3>
                 <p class="text-slate-400 mb-6">Your withdrawal request has been processed successfully.</p>
-                <button onclick="hideSuccessMessage()" 
+                <button onclick="hideSuccessMessage()"
                     class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium py-3 px-4 rounded-lg hover:opacity-90 transition-all active:transform active:translate-y-1">
                     Done
                 </button>
@@ -153,7 +174,8 @@
 
     <!-- Bottom Navigation -->
     <!-- Bottom Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
         <div class="container mx-auto px-4">
             <div class="flex justify-around py-2">
                 <a href="index.html" class="nav-item">
@@ -179,4 +201,5 @@
     <script src="assets/js/withdraw.js"></script>
     <script src="assets/js/langSupport.js"></script>
 </body>
-</html> 
+
+</html>

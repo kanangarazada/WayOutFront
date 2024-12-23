@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body class="bg-slate-900 text-white min-h-screen font-[Inter] pb-20">
     <!-- Header -->
     <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
@@ -22,39 +24,53 @@
             </a>
             <div class="flex items-center gap-2">
                 <!-- Language Selector -->
-                <button id="languageBtn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
+                <button id="languageBtn"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
                     <i class="fas fa-globe text-slate-400"></i>
                 </button>
-                
+
                 <!-- Language Modal -->
-                <div id="languageModal" class="hidden absolute top-16 right-4 w-48 bg-slate-800 rounded-xl border border-slate-700/50 shadow-lg">
+                <div id="languageModal"
+                    class="hidden absolute top-16 right-4 w-48 bg-slate-900 rounded-xl border border-slate-700/50 shadow-lg">
                     <div class="p-2 space-y-1">
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded" alt="English">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded"
+                                alt="English">
                             English
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded" alt="Turkish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded"
+                                alt="Turkish">
                             Türkçe
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded" alt="Russian">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded"
+                                alt="Russian">
                             Русский
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded" alt="Spanish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded"
+                                alt="Spanish">
                             Español
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
                             Français
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
                             Deutsch
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded" alt="Chinese">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded"
+                                alt="Chinese">
                             中文
                         </button>
                     </div>
@@ -92,7 +108,7 @@
             <div class="flex gap-2 mb-6">
                 <input type="text" value="https://zypher.com/ref/john123" readonly
                     class="flex-1 bg-slate-800/90 border border-slate-700/50 rounded-lg px-4 py-3 text-sm text-slate-300">
-                <button onclick="copyToClipboard(this, 'https://zypher.com/ref/john123')" 
+                <button onclick="copyToClipboard(this, 'https://zypher.com/ref/john123')"
                     class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-lg hover:bg-blue-500/20 transition-all active:transform active:translate-y-1">
                     <i class="fas fa-copy"></i>
                 </button>
@@ -122,7 +138,8 @@
             <h3 class="text-lg font-semibold mb-4">How It Works</h3>
             <div class="space-y-4">
                 <div class="flex gap-4">
-                    <div class="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 font-semibold">
+                    <div
+                        class="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 font-semibold">
                         1
                     </div>
                     <div>
@@ -131,16 +148,19 @@
                     </div>
                 </div>
                 <div class="flex gap-4">
-                    <div class="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-500 font-semibold">
+                    <div
+                        class="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-500 font-semibold">
                         2
                     </div>
                     <div>
                         <h4 class="font-medium text-white mb-1">Friends Join</h4>
-                        <p class="text-sm text-slate-400">When they sign up using your link, they become your referral</p>
+                        <p class="text-sm text-slate-400">When they sign up using your link, they become your referral
+                        </p>
                     </div>
                 </div>
                 <div class="flex gap-4">
-                    <div class="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 font-semibold">
+                    <div
+                        class="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 font-semibold">
                         3
                     </div>
                     <div>
@@ -162,11 +182,12 @@
                 </div>
                 <i id="referralArrow" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
             </button>
-            
+
             <div id="referralList" class="mt-0 max-h-0 overflow-hidden transition-all duration-300 opacity-0">
                 <div class="space-y-4 p-6">
                     <!-- Referral Item -->
-                    <div class="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
+                    <div
+                        class="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center">
                                 <i class="fas fa-user text-slate-400"></i>
@@ -184,9 +205,10 @@
                             <span class="text-xs text-emerald-400">Earned</span>
                         </div>
                     </div>
-                    
+
                     <!-- More Referral Items -->
-                    <div class="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
+                    <div
+                        class="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center">
                                 <i class="fas fa-user text-slate-400"></i>
@@ -210,7 +232,8 @@
     </main>
 
     <!-- Bottom Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
         <div class="container mx-auto px-4">
             <div class="flex justify-around py-2">
                 <a href="index.html" class="nav-item">
@@ -236,4 +259,5 @@
     <script src="assets/js/referrals.js"></script>
     <script src="assets/js/langSupport.js"></script>
 </body>
-</html> 
+
+</html>

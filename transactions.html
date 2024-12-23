@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,10 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body class="bg-slate-900 text-white min-h-screen font-[Inter] pb-20">
-       <!-- Header -->
-       <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
+    <!-- Header -->
+    <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between">
             <a href="index.html" class="text-2xl font-bold">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
@@ -22,39 +24,53 @@
             </a>
             <div class="flex items-center gap-2">
                 <!-- Language Selector -->
-                <button id="languageBtn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
+                <button id="languageBtn"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
                     <i class="fas fa-globe text-slate-400"></i>
                 </button>
-                
+
                 <!-- Language Modal -->
-                <div id="languageModal" class="hidden absolute top-16 right-4 w-48 bg-slate-800 rounded-xl border border-slate-700/50 shadow-lg">
+                <div id="languageModal"
+                    class="hidden absolute top-16 right-4 w-48 bg-slate-900 rounded-xl border border-slate-700/50 shadow-lg">
                     <div class="p-2 space-y-1">
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded" alt="English">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded"
+                                alt="English">
                             English
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded" alt="Turkish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded"
+                                alt="Turkish">
                             Türkçe
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded" alt="Russian">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded"
+                                alt="Russian">
                             Русский
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded" alt="Spanish">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded"
+                                alt="Spanish">
                             Español
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
                             Français
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
                             <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
                             Deutsch
                         </button>
-                        <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-700/50 text-left text-sm text-white transition-colors">
-                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded" alt="Chinese">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded"
+                                alt="Chinese">
                             中文
                         </button>
                     </div>
@@ -88,7 +104,8 @@
                             +500.00
                             <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-3.5">
                         </div>
-                        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500">Completed</span>
+                        <span
+                            class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500">Completed</span>
                     </div>
                 </div>
             </div>
@@ -110,7 +127,8 @@
                             -200.00
                             <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-3.5">
                         </div>
-                        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-yellow-500/10 text-yellow-500">Processing</span>
+                        <span
+                            class="text-[10px] px-1.5 py-0.5 rounded-full bg-yellow-500/10 text-yellow-500">Processing</span>
                     </div>
                 </div>
             </div>
@@ -154,7 +172,8 @@
                             +750.00
                             <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-3.5">
                         </div>
-                        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-slate-500/10 text-slate-400">Pending</span>
+                        <span
+                            class="text-[10px] px-1.5 py-0.5 rounded-full bg-slate-500/10 text-slate-400">Pending</span>
                     </div>
                 </div>
             </div>
@@ -176,7 +195,8 @@
                             -300.00
                             <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-3.5">
                         </div>
-                        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500">Completed</span>
+                        <span
+                            class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500">Completed</span>
                     </div>
                 </div>
             </div>
@@ -198,14 +218,16 @@
                             +1,000.00
                             <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="h-3.5">
                         </div>
-                        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500">Completed</span>
+                        <span
+                            class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500">Completed</span>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
         <div class="container mx-auto px-4">
             <div class="flex justify-around py-2">
                 <a href="index.html" class="nav-item">
@@ -229,4 +251,5 @@
     </nav>
     <script src="assets/js/langSupport.js"></script>
 </body>
-</html> 
+
+</html>
