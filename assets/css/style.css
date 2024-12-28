@@ -1,11 +1,6 @@
 /* Base styles */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8fafc; /* Light mode background */
-    color: #1e293b; /* Light mode text color */
-}
-
-.dark body {
     background-color: #1e293b; /* Dark mode background */
     color: #f8fafc; /* Dark mode text color */
 }
@@ -20,7 +15,7 @@ body {
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
 }
 
-.dark .balance-card {
+ .balance-card {
     background: linear-gradient(145deg, rgba(30, 41, 59, 0.1), rgba(30, 41, 59, 0.05));
     border: 1px solid rgba(30, 41, 59, 0.1);
     box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
@@ -90,20 +85,12 @@ body {
 }
 
 .nav-item.active {
-    color: #3B82F6;
-}
-
-.dark .nav-item {
-    color: #cbd5e1;
-}
-
-.dark .nav-item.active {
     color: #60a5fa;
 }
 
 /* Article Card */
 .article-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(30, 41, 59, 0.05);
     border-radius: 1rem;
     padding: 1.5rem;
     transition: transform 0.3s ease;
@@ -111,10 +98,6 @@ body {
 
 .article-card:hover {
     transform: translateY(-2px);
-}
-
-.dark .article-card {
-    background: rgba(30, 41, 59, 0.05);
 }
 
 /* Pulse Dot */

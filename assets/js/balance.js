@@ -11,7 +11,7 @@ function toggleReferrals() {
     } else {
         referralList.style.maxHeight = referralList.scrollHeight + "px";
         referralList.classList.remove('opacity-0');
-        referralList.classList.add('mt-6');
+        referralList.classList.add('mt-0');
         referralArrow.style.transform = 'rotate(180deg)';
     }
 }
