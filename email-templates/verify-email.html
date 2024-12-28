@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Email - Zypher</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; background-color: #0f172a;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+                <!-- Main Container -->
+                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; margin: 0 auto; background-color: #1e293b; border-radius: 24px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border: 1px solid rgba(148, 163, 184, 0.1);">
+                    <!-- Header -->
+                    <tr>
+                        <td align="center" style="padding: 48px 40px 40px 40px; background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);">
+                            <img src="{{logoUrl}}" alt="Zypher" style="width: 120px; height: auto; margin-bottom: 24px;">
+                            <h1 style="margin: 0; font-size: 28px; color: #ffffff; font-weight: 700; letter-spacing: -0.5px;">Verify Your Email</h1>
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 48px 40px;">
+                            <p style="margin: 0 0 24px 0; font-size: 16px; line-height: 24px; color: #e2e8f0;">
+                                Hi {{username}},
+                            </p>
+                            
+                            <p style="margin: 0 0 32px 0; font-size: 16px; line-height: 24px; color: #e2e8f0;">
+                                Welcome to Zypher! To get started, please verify your email address by clicking the button below:
+                            </p>
+
+                            <!-- Verify Button -->
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 32px 0;">
+                                <tr>
+                                    <td align="center">
+                                        <a href="{{verificationLink}}" style="display: inline-block; padding: 16px 48px; background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%); color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px; border-radius: 12px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);">
+                                            Verify Email Address
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Link Box -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin: 32px 0; background-color: #0f172a; border-radius: 12px; border: 1px solid rgba(148, 163, 184, 0.1);">
+                                <tr>
+                                    <td style="padding: 16px;">
+                                        <p style="margin: 0 0 8px 0; font-size: 14px; line-height: 20px; color: #94a3b8;">
+                                            Or copy this link into your browser:
+                                        </p>
+                                        <p style="margin: 0; font-size: 14px; line-height: 20px; color: #60a5fa; word-break: break-all;">
+                                            {{verificationLink}}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Warning Box -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 32px; background-color: rgba(124, 58, 237, 0.1); border-radius: 12px; border: 1px solid rgba(124, 58, 237, 0.2);">
+                                <tr>
+                                    <td style="padding: 16px;">
+                                        <p style="margin: 0; font-size: 14px; line-height: 20px; color: #c4b5fd;">
+                                            <img src="{{clockIcon}}" alt="Clock" style="vertical-align: middle; margin-right: 8px; width: 16px; height: 16px;">
+                                            This verification link will expire in <strong>24 hours</strong>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p style="margin: 0 0 8px 0; font-size: 16px; line-height: 24px; color: #e2e8f0;">
+                                Best regards,
+                            </p>
+                            <p style="margin: 0; font-size: 16px; line-height: 24px; color: #e2e8f0; font-weight: 600;">
+                                The Zypher Team
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 32px 40px; background-color: #0f172a; border-top: 1px solid rgba(148, 163, 184, 0.1);">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td align="center" style="padding-bottom: 24px;">
+                                        <div style="display: inline-block; background: rgba(148, 163, 184, 0.1); border-radius: 12px; padding: 16px;">
+                                            <a href="#" style="display: inline-block; margin: 0 12px;">
+                                                <img src="{{instagramIcon}}" alt="Instagram" style="width: 24px; height: 24px;">
+                                            </a>
+                                            <a href="#" style="display: inline-block; margin: 0 12px;">
+                                                <img src="{{telegramIcon}}" alt="Telegram" style="width: 24px; height: 24px;">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <p style="margin: 0 0 16px 0; font-size: 14px; line-height: 20px; color: #94a3b8;">
+                                            If you didn't create an account with Zypher, you can safely ignore this email.
+                                        </p>
+                                        <p style="margin: 0; font-size: 12px; line-height: 16px; color: #64748b;">
+                                            © 2024 Zypher. All rights reserved.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Unsubscribe Footer -->
+                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; margin: 0 auto;">
+                    <tr>
+                        <td style="padding: 24px 40px;">
+                            <p style="margin: 0; font-size: 12px; line-height: 16px; color: #64748b; text-align: center;">
+                                <a href="{{unsubscribeLink}}" style="color: #64748b; text-decoration: underline;">Unsubscribe</a> from Zypher emails
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html> 
