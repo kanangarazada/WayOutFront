@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Deposit USDT - Zypher App</title>
@@ -10,150 +11,205 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.min.js"></script>
 </head>
+
 <body class="bg-slate-900 min-h-screen font-[Inter]">
-        <!-- Header -->
-        <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
-            <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-                <a href="index.html" class="text-2xl font-bold">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
-                        Zypher
-                    </span>
-                </a>
-                <div class="flex items-center gap-2">
-                    <!-- Language Selector -->
-                    <button id="languageBtn"
-                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
-                        <i class="fas fa-globe text-slate-400"></i>
-                    </button>
-    
-                    <!-- Language Modal -->
-                    <div id="languageModal"
-                        class="hidden absolute top-16 right-4 w-48 bg-slate-900 rounded-xl border border-slate-700/50 shadow-lg">
-                        <div class="p-2 space-y-1">
-                            <button
-                                class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
-                                <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded"
-                                    alt="English">
-                                English
-                            </button>
-                            <button
-                                class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
-                                <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded"
-                                    alt="Turkish">
-                                Türkçe
-                            </button>
-                            <button
-                                class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
-                                <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded"
-                                    alt="Russian">
-                                Русский
-                            </button>
-                            <button
-                                class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
-                                <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded"
-                                    alt="Spanish">
-                                Español
-                            </button>
-                            <button
-                                class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
-                                <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
-                                Français
-                            </button>
-                            <button
-                                class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
-                                <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
-                                Deutsch
-                            </button>
-                            <button
-                                class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
-                                <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded"
-                                    alt="Chinese">
-                                中文
-                            </button>
-                        </div>
+    <!-- Header -->
+    <header class="sticky top-0 bg-slate-900/80 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
+                    Zypher
+                </span>
+            </a>
+            <div class="flex items-center gap-2">
+                <!-- Language Selector -->
+                <button id="languageBtn"
+                    class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors relative">
+                    <i class="fas fa-globe text-slate-400"></i>
+                </button>
+
+                <!-- Language Modal -->
+                <div id="languageModal"
+                    class="hidden absolute top-16 right-4 w-48 bg-slate-900 rounded-xl border border-slate-700/50 shadow-lg">
+                    <div class="p-2 space-y-1">
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded"
+                                alt="English">
+                            English
+                        </button>
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/tr.png" class="w-5 h-4 object-cover rounded"
+                                alt="Turkish">
+                            Türkçe
+                        </button>
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/ru.png" class="w-5 h-4 object-cover rounded"
+                                alt="Russian">
+                            Русский
+                        </button>
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/es.png" class="w-5 h-4 object-cover rounded"
+                                alt="Spanish">
+                            Español
+                        </button>
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/fr.png" class="w-5 h-4 object-cover rounded" alt="French">
+                            Français
+                        </button>
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/de.png" class="w-5 h-4 object-cover rounded" alt="German">
+                            Deutsch
+                        </button>
+                        <button
+                            class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-800 text-left text-sm text-white transition-colors">
+                            <img src="https://flagcdn.com/w40/cn.png" class="w-5 h-4 object-cover rounded"
+                                alt="Chinese">
+                            中文
+                        </button>
                     </div>
-    
-                    <a href="profile.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">
-                        <i class="fas fa-user text-slate-400"></i>
-                    </a>
                 </div>
+
+                <a href="profile.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">
+                    <i class="fas fa-user text-slate-400"></i>
+                </a>
             </div>
-        </header>
+        </div>
+    </header>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 pb-20 py-8">
         <div class="max-w-2xl mx-auto">
-            <!-- Network Selection Banner -->
-            <div class="bg-gradient-to-r from-red-500/10 to-red-500/5 border border-red-500/20 rounded-xl p-4 mb-6 flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-exclamation-triangle text-red-400"></i>
-                </div>
-                <div>
-                    <h3 class="text-red-400 font-medium mb-1">Important: Network Selection</h3>
-                    <p class="text-slate-400 text-sm">
-                        Please send only <span class="text-white font-medium">USDT</span> on the <span class="text-white font-medium">TRON (TRC20)</span> network. Other networks are not supported and may result in lost funds.
+            <!-- Initial Process Order Button (shown by default) -->
+            <div id="processOrderSection" class="min-h-[60vh] flex items-center justify-center">
+                <div class="text-center max-w-md mx-auto p-8 rounded-2xl bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm">
+                    <div class="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wallet text-2xl text-purple-400"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold text-white mb-2">Deposit USDT</h2>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Start your deposit process to add USDT funds to your account using TRON (TRC20) network.
                     </p>
+                    <button onclick="startDeposit()" 
+                        class="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-3 rounded-xl font-medium hover:opacity-90 transition-opacity">
+                        Start Deposit
+                    </button>
                 </div>
             </div>
 
-            <!-- Deposit Card -->
-            <div class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-xl overflow-hidden">
-                <!-- Card Header -->
-                <div class="p-6 border-b border-slate-700/50">
+            <!-- Deposit Section (hidden by default) -->
+            <div id="depositSection" class="hidden">
+                <!-- Timer Banner -->
+                <div
+                    class="bg-gradient-to-r from-yellow-500/10 to-yellow-500/5 border border-yellow-500/20 rounded-xl p-4 mb-6">
                     <div class="flex items-center justify-between">
-                        <h2 class="text-xl font-semibold text-white">Deposit USDT</h2>
-                        <div class="flex items-center gap-2">
-                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="w-6 h-6">
-                            <img src="https://cryptologos.cc/logos/tron-trx-logo.png" alt="TRON" class="w-6 h-6">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- QR Code Section -->
-                <div class="p-6 border-b border-slate-700/50 flex items-center justify-center">
-                    <div class="bg-white p-4 rounded-lg">
-                        <div id="qrcode" class="w-[192px] h-[192px]"></div>
-                    </div>
-                </div>
-
-                <!-- Wallet Address Section -->
-                <div class="p-6">
-                    <label class="block text-sm font-medium text-slate-400 mb-2">
-                        Wallet Address (USDT-TRC20)
-                    </label>
-                    <div class="flex items-center gap-2">
-                        <div class="flex-1 bg-slate-800/90 border border-slate-700/50 rounded-lg p-3 font-mono text-white break-all">
-                            TWe3LqFVxpfvxqjYzNZsJGYqPD4dFBX2YV
-                        </div>
-                        <button id="copyButton" onclick="copyAddress()" class="bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/20 text-blue-400 p-3 rounded-lg transition-colors">
-                            <i class="fas fa-copy"></i>
-                        </button>
-                    </div>
-
-                    <!-- Processing Time Notice -->
-                    <div class="mt-6 p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-clock text-blue-400 mt-1"></i>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-yellow-400"></i>
+                            </div>
                             <div>
-                                <h4 class="text-white font-medium mb-1">Processing Time</h4>
-                                <p class="text-slate-400 text-sm">
-                                    After sending USDT, please allow 3-5 minutes for your balance to update. The transaction needs network confirmations before being credited.
-                                </p>
+                                <h3 class="text-yellow-400 font-medium">Time Remaining</h3>
+                                <p class="text-slate-400 text-sm">Complete the payment before time expires</p>
+                            </div>
+                        </div>
+                        <div id="timer" class="text-2xl font-bold text-white">30:00</div>
+                    </div>
+                </div>
+
+                <!-- Network Selection Banner -->
+                <div
+                    class="bg-gradient-to-r from-red-500/10 to-red-500/5 border border-red-500/20 rounded-xl p-4 mb-6 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-exclamation-triangle text-red-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-red-400 font-medium mb-1">Important: Network Selection</h3>
+                        <p class="text-slate-400 text-sm">
+                            Please send only <span class="text-white font-medium">USDT</span> on the <span
+                                class="text-white font-medium">TRON (TRC20)</span> network. Other networks are not
+                            supported and may result in lost funds.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Deposit Card -->
+                <div
+                    class="bg-gradient-to-br from-slate-900 to-slate-800/90 border border-slate-700/50 rounded-xl overflow-hidden">
+                    <!-- Card Header -->
+                    <div class="p-6 border-b border-slate-700/50">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-xl font-semibold text-white">Deposit USDT</h2>
+                            <div class="flex items-center gap-2">
+                                <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="w-6 h-6">
+                                <img src="https://cryptologos.cc/logos/tron-trx-logo.png" alt="TRON" class="w-6 h-6">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Minimum Deposit Notice -->
-                    <div class="mt-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-info-circle text-purple-400 mt-1"></i>
-                            <div>
-                                <h4 class="text-white font-medium mb-1">Minimum Deposit</h4>
-                                <p class="text-slate-400 text-sm">
-                                    Minimum deposit amount: <span class="text-white font-medium">25 USDT</span>
-                                    <br>
-                                    Deposits below this amount cannot be processed.
-                                </p>
+                    <!-- QR Code Section -->
+                    <div class="p-6 border-b border-slate-700/50 flex items-center justify-center">
+                        <div class="bg-white p-4 rounded-lg">
+                            <div id="qrcode" class="w-[192px] h-[192px]"></div>
+                        </div>
+                    </div>
+
+                    <!-- Wallet Address Section -->
+                    <div class="p-6">
+                        <label class="block text-sm font-medium text-slate-400 mb-2">
+                            Wallet Address (USDT-TRC20)
+                        </label>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="flex-1 bg-slate-800/90 border border-slate-700/50 rounded-lg p-3 font-mono text-white break-all">
+                                TWe3LqFVxpfvxqjYzNZsJGYqPD4dFBX2YV
+                            </div>
+                            <button id="copyButton" onclick="copyAddress()"
+                                class="bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/20 text-blue-400 p-3 rounded-lg transition-colors">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <!-- I Have Paid Button -->
+                        <div class="mt-6">
+                            <button onclick="showConfirmationModal()"
+                                class="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white py-3 rounded-xl font-medium hover:opacity-90 transition-opacity">
+                                I Have Paid
+                            </button>
+                        </div>
+
+                        <!-- Add this new notice section after the Minimum Deposit Notice -->
+                        <div class="mt-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-hand-pointer text-blue-400 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white font-medium mb-1">Important Action Required</h4>
+                                    <p class="text-slate-400 text-sm">
+                                        After completing your payment, you <span class="text-white font-medium">must
+                                            click</span> the "I Have Paid" button above to process your transaction.
+                                        Without clicking this button, we cannot process your deposit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Minimum Deposit Notice -->
+                        <div class="mt-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-info-circle text-purple-400 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white font-medium mb-1">Minimum Deposit</h4>
+                                    <p class="text-slate-400 text-sm">
+                                        Minimum deposit amount: <span class="text-white font-medium">25 USDT</span>
+                                        <br>
+                                        Deposits below this amount cannot be processed.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,9 +218,58 @@
         </div>
     </main>
 
-        <!-- Bottom Navigation -->
-        <nav
-        class="fixed bottom-0 left-0 right-0 bg-slate-900/80 backdrop-blur-lg border-t border-slate-800">
+    <div id="confirmationModal" class="hidden fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 transition-opacity duration-200">
+        <div class="px-4 w-full max-w-md scale-95 transition-transform duration-200" id="modalContent">
+            <div class="bg-slate-800 rounded-2xl p-6 relative">
+                <!-- Close button -->
+                <button onclick="closeConfirmationModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-lg hover:bg-slate-700/50 text-slate-400 hover:text-white transition-colors">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-info-circle text-3xl text-blue-400"></i>
+                </div>
+                
+                <h3 class="text-xl font-semibold text-white text-center mb-3">Confirm Your Transaction</h3>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="bg-slate-700/30 rounded-lg p-4">
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Before confirming, please ensure that:
+                        </p>
+                        <ul class="mt-2 space-y-2 text-sm text-slate-400">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                                <span>You have sent the exact amount to the provided wallet address</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                                <span>You used the TRON (TRC20) network for the transfer</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-slate-400 text-sm">
+                        After confirmation, please allow 10-15 minutes for your balance to update while the transaction is being processed.
+                    </p>
+                </div>
+
+                <div class="flex gap-3">
+                    <button onclick="closeConfirmationModal()" 
+                        class="flex-1 px-4 py-3 rounded-xl bg-slate-700/50 text-white hover:bg-slate-700 transition-colors">
+                        Go Back
+                    </button>
+                    <button onclick="confirmPayment()" 
+                        class="flex-1 px-4 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-blue-500 text-white hover:opacity-90 transition-opacity">
+                        Confirm Transaction
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-slate-900/80 backdrop-blur-lg border-t border-slate-800">
         <div class="container mx-auto px-4">
             <div class="flex justify-around py-2">
                 <a href="index.html" class="nav-item">
@@ -189,8 +294,65 @@
 
     <script>
         const walletAddress = "TWe3LqFVxpfvxqjYzNZsJGYqPD4dFBX2YV";
-        
-        document.addEventListener('DOMContentLoaded', function() {
+        let timerInterval;
+
+        function startDeposit() {
+            document.getElementById('processOrderSection').classList.add('hidden');
+            document.getElementById('depositSection').classList.remove('hidden');
+            startTimer(30 * 60); // 30 minutes in seconds
+        }
+
+        function startTimer(duration) {
+            let timer = duration;
+            const display = document.getElementById('timer');
+
+            timerInterval = setInterval(() => {
+                const minutes = Math.floor(timer / 60);
+                const seconds = timer % 60;
+
+                display.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                if (--timer < 0) {
+                    clearInterval(timerInterval);
+                    window.location.href = 'index.html'; // Redirect when timer expires
+                }
+            }, 1000);
+        }
+
+        function showConfirmationModal() {
+            const modal = document.getElementById('confirmationModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modal.classList.remove('hidden');
+            // Trigger animation faster
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 30); // Reduced from 50ms to 30ms
+        }
+
+        function closeConfirmationModal() {
+            const modal = document.getElementById('confirmationModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            
+            // Wait for animation to finish before hiding (reduced from 300ms to 200ms)
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+
+        function confirmPayment() {
+            clearInterval(timerInterval);
+            // Add any additional confirmation logic here
+            window.location.href = 'wallet.html'; // Redirect to wallet page
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
             const qrCode = new QRCodeStyling({
                 width: 192,
                 height: 192,
@@ -227,12 +389,12 @@
         function copyAddress() {
             const copyButton = document.getElementById('copyButton');
             const originalContent = copyButton.innerHTML;
-            
+
             navigator.clipboard.writeText(walletAddress).then(() => {
                 copyButton.innerHTML = '<i class="fas fa-check text-emerald-400"></i>';
                 copyButton.classList.remove('bg-blue-500/10', 'hover:bg-blue-500/20', 'border-blue-500/20', 'text-blue-400');
                 copyButton.classList.add('bg-emerald-500/10', 'border-emerald-500/20', 'text-emerald-400');
-                
+
                 setTimeout(() => {
                     copyButton.innerHTML = originalContent;
                     copyButton.classList.remove('bg-emerald-500/10', 'border-emerald-500/20', 'text-emerald-400');
@@ -240,8 +402,16 @@
                 }, 2000);
             });
         }
+
+        // Close modal when clicking outside
+        document.getElementById('confirmationModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeConfirmationModal();
+            }
+        });
     </script>
     <script src="assets/js/langSupport.js"></script>
 
 </body>
-</html> 
+
+</html>
