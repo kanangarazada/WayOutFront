@@ -296,63 +296,84 @@
         const walletAddress = "TWe3LqFVxpfvxqjYzNZsJGYqPD4dFBX2YV";
         let timerInterval;
 
-        function startDeposit() {
+        // Check deposit session state on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            checkDepositSession();
+            initQRCode();
+        });
+
+        function checkDepositSession() {
+            const depositSession = JSON.parse(localStorage.getItem('depositSession'));
+            
+            if (depositSession && depositSession.active) {
+                const now = new Date().getTime();
+                const endTime = depositSession.endTime;
+                
+                if (now < endTime) {
+                    // Session is still valid
+                    const remainingTime = Math.floor((endTime - now) / 1000);
+                    startDeposit(false);
+                    startTimer(remainingTime);
+                } else {
+                    // Session has expired
+                    clearDepositSession();
+                }
+            }
+        }
+
+        function startDeposit(isNewSession = true) {
             document.getElementById('processOrderSection').classList.add('hidden');
             document.getElementById('depositSection').classList.remove('hidden');
-            startTimer(30 * 60); // 30 minutes in seconds
+            
+            if (isNewSession) {
+                const duration = 30 * 60; // 30 minutes in seconds
+                const endTime = new Date().getTime() + (duration * 1000);
+                
+                // Save session state
+                localStorage.setItem('depositSession', JSON.stringify({
+                    active: true,
+                    endTime: endTime
+                }));
+                
+                startTimer(duration);
+            }
         }
 
         function startTimer(duration) {
             let timer = duration;
             const display = document.getElementById('timer');
-
-            timerInterval = setInterval(() => {
+            
+            // Clear any existing interval
+            if (timerInterval) clearInterval(timerInterval);
+            
+            function updateDisplay() {
                 const minutes = Math.floor(timer / 60);
                 const seconds = timer % 60;
-
                 display.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
+                
                 if (--timer < 0) {
                     clearInterval(timerInterval);
-                    window.location.href = 'index.html'; // Redirect when timer expires
+                    clearDepositSession();
+                    window.location.href = 'index.html';
                 }
-            }, 1000);
+            }
+            
+            updateDisplay();
+            timerInterval = setInterval(updateDisplay, 1000);
         }
 
-        function showConfirmationModal() {
-            const modal = document.getElementById('confirmationModal');
-            const modalContent = document.getElementById('modalContent');
-            
-            modal.classList.remove('hidden');
-            // Trigger animation faster
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modalContent.classList.remove('scale-95');
-                modalContent.classList.add('scale-100');
-            }, 30); // Reduced from 50ms to 30ms
-        }
-
-        function closeConfirmationModal() {
-            const modal = document.getElementById('confirmationModal');
-            const modalContent = document.getElementById('modalContent');
-            
-            modal.classList.add('opacity-0');
-            modalContent.classList.remove('scale-100');
-            modalContent.classList.add('scale-95');
-            
-            // Wait for animation to finish before hiding (reduced from 300ms to 200ms)
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 200);
+        function clearDepositSession() {
+            localStorage.removeItem('depositSession');
+            if (timerInterval) clearInterval(timerInterval);
         }
 
         function confirmPayment() {
-            clearInterval(timerInterval);
-            // Add any additional confirmation logic here
-            window.location.href = 'wallet.html'; // Redirect to wallet page
+            clearDepositSession();
+            window.location.href = 'wallet.html';
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
+        // Separate QR code initialization
+        function initQRCode() {
             const qrCode = new QRCodeStyling({
                 width: 192,
                 height: 192,
@@ -383,7 +404,34 @@
             });
 
             qrCode.append(document.getElementById("qrcode"));
-        });
+        }
+
+        function showConfirmationModal() {
+            const modal = document.getElementById('confirmationModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modal.classList.remove('hidden');
+            // Trigger animation faster
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 30); // Reduced from 50ms to 30ms
+        }
+
+        function closeConfirmationModal() {
+            const modal = document.getElementById('confirmationModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            
+            // Wait for animation to finish before hiding (reduced from 300ms to 200ms)
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
 
         // Copy Address Function
         function copyAddress() {
